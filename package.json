@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "description": "Hackathon Praktikum team#1",
-  "name": "Hackathon Praktikum team#1",
+  "name": "hackathon_praktikum_team_1",
   "scripts": {
     "build": "webpack --mode=production --define-process-env-node-env=production",
     "dev": "webpack  --mode=development serve",
