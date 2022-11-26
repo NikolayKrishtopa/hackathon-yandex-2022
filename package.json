@@ -4,10 +4,10 @@
   "name": "Hackathon Praktikum team#1",
   "scripts": {
     "build": "webpack --mode=production --define-process-env-node-env=production",
-    "dev": "webpack --watch --mode=development serve",
+    "dev": "webpack  --mode=development serve",
     "prod": "webpack --mode=production --define-process-env-node-env=production",
-    "watch": "webpack --watch",
-    "serve": "webpack watch serve"
+    "watch": "webpack ",
+    "serve": "webpack serve"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
