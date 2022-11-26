@@ -1,0 +1,8 @@
+.responsible-fade {
+    cursor: pointer;
+    transition: opacity .5s ease;
+    }
+  
+  .responsible-fade:hover {
+    opacity: 60%;
+  }

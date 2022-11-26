@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
-  "description": "My webpack project",
-  "name": "my-webpack-project",
+  "description": "Hackathon Praktikum team#1",
+  "name": "Hackathon Praktikum team#1",
   "scripts": {
     "build": "webpack --mode=production --define-process-env-node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --define-process-env-node-env=production",
+    "dev": "webpack --watch --mode=development serve",
+    "prod": "webpack --mode=production --define-process-env-node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack watch serve"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
