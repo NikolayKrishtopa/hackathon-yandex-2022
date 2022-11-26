@@ -14,17 +14,14 @@ const config = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
     compress: true,
-    port: 8080,
     hot: true,
     watchFiles: ["*.html"],
+    open: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "index.html",
     }),
   ],
   module: {
