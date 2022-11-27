@@ -101,7 +101,7 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background: url("https://thumbs.dreamstime.com/z/%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0%D1%8F-%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD%D0%B0-%D1%81%D0%B8%D0%B4%D0%B8%D1%82-%D0%BD%D0%B0-%D0%BA%D0%B0%D0%BC%D0%BD%D0%B5-%D0%B1%D0%B5%D1%80%D0%B5%D0%B3%D1%83-%D0%BC%D0%BE%D1%80%D1%8F-%D1%81-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA%D0%BE%D0%BC-%D0%B2-%D1%80%D1%83%D0%BA%D0%B0%D1%85-%D0%B4%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B0-195430570.jpg");
+  background: url(../../img/headerBcgnd.png);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -110,6 +110,9 @@
   pointer-events: none;
 }
 @media (max-width: 1000px) {
+  .header {
+    padding: 12px 60px 200px;
+  }
   .header__title {
     font-size: 70px;
   }
@@ -119,6 +122,7 @@
   .header__button {
     width: 230px;
     height: 50px;
+    border-radius: 25px;
     font-size: 14px;
   }
   .header__logo {
@@ -128,5 +132,40 @@
   .header span {
     width: 150px;
     height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 12px 40px 200px;
+  }
+  .header__title {
+    font-size: 50px;
+  }
+  .header__subtitle {
+    font-size: 14px;
+  }
+  .header__navbar {
+    margin: 0 0 100px 0;
+  }
+  .header__button {
+    width: 190px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+@media (max-width: 600px) {
+  .header__title {
+    font-size: 40px;
+  }
+  .header__subtitle {
+    font-size: 12px;
+  }
+  .header__button {
+    width: 160px;
+    height: 45px;
+    border-radius: 22px;
+    font-size: 10px;
   }
 }
