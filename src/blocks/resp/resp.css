@@ -35,6 +35,10 @@
   list-style: none;
 }
 .resp__gridWrapper {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
