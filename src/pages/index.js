@@ -47,5 +47,7 @@ setInterval(() => {
 // ***Реализация появления сообщений при скролле
 
 const anchor = document.querySelector(".mentorVSreviewer__quoteTitle");
-// console.log(anchor.pageY);
-document.addEventListener("scroll", (e) => e.preventDefault());
+
+document.addEventListener("scroll", (e) =>
+  console.log(anchor.getBoundingClientRect())
+);
