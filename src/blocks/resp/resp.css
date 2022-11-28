@@ -1,5 +1,5 @@
 .resp {
-  margin: -80px 0;
+  margin: -80px 0 0 0;
   padding: 140px 120px;
   width: 100%;
   box-sizing: border-box;
@@ -48,11 +48,11 @@
   justify-content: flex-end;
   gap: 12px;
 }
-.resp__pic {
+/* .resp__pic {
   position: absolute;
   right: 77px;
   top: 510px;
-}
+} */
 .resp__itemTitle {
   margin: 0;
   padding: 0 0 16px 0;
@@ -87,23 +87,16 @@
 .resp__introSwitch {
   color: #37935b;
 }
-@media (max-width: 1300px) {
-  .resp__pic {
-    /* right: 80px;
-    top: 130px; */
-    transform: scale(0.9);
-  }
-}
 @media (max-width: 1200px) {
   .resp__title {
     font-size: 60px;
     margin-bottom: 40px;
   }
-  .resp__pic {
+  /* .resp__pic {
     right: 80px;
     top: 530px;
     transform: scale(0.7);
-  }
+  } */
 }
 @media (max-width: 1000px) {
   .resp {
@@ -114,11 +107,11 @@
     font-size: 50px;
     margin-bottom: 50px;
   }
-  .resp__pic {
+  /* .resp__pic {
     right: 60px;
     top: 380px;
     transform: scale(0.6);
-  }
+  } */
   .resp__introHeading {
     font-size: 50px;
     line-height: 1;
@@ -141,12 +134,12 @@
   .resp__item {
     width: 100%;
   }
-  .resp__pic {
+  /* .resp__pic {
     display: none;
     right: -20px;
     top: 420px;
     transform: scale(0.4);
-  }
+  } */
 }
 @media (max-width: 700px) {
   .resp__introHeading {
@@ -159,10 +152,10 @@
     font-size: 30px;
     margin-bottom: 40px;
   }
-  .resp__pic {
+  /* .resp__pic {
     right: -40px;
     top: 280px;
-  }
+  } */
   .resp__itemTitle {
     font-size: 25px;
   }
@@ -174,31 +167,31 @@
   .resp {
     padding: 80px 40px;
   }
-  .resp__pic {
+  /* .resp__pic {
     right: -80px;
     top: 0px;
     transform: scale(0.3);
-  }
+  } */
 }
 
 @media (max-width: 500px) {
   .resp {
     border-radius: 30px;
   }
-  .resp__pic {
+  /* .resp__pic {
     right: -100px;
     top: 15px;
-  }
+  } */
 }
 @media (max-width: 700px) {
   .resp__title {
     font-size: 25px;
     margin-bottom: 40px;
   }
-  .resp__pic {
-    /* right: -40px; */
+  /* .resp__pic {
+    right: -40px;
     top: 0px;
-  }
+  } */
   .resp__itemTitle {
     font-size: 20px;
   }

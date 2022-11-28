@@ -1,0 +1,73 @@
+.mentorVSreviewer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 80px;
+  position: relative;
+}
+.mentorVSreviewer__title {
+  margin: 0;
+  padding: 0;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.06;
+  color: #fff;
+  max-width: 600px;
+  position: absolute;
+  top: 56px;
+  left: 112px;
+}
+.mentorVSreviewer__iconContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 51px;
+  right: 85px;
+  gap: 13px;
+}
+.mentorVSreviewer__icon {
+  margin: 0;
+  padding: 0;
+  width: 70px;
+}
+.mentorVSreviewer__icon_style_fade {
+  opacity: 50%;
+}
+.mentorVSreviewer__quoteContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  right: 112px;
+  bottom: 128px;
+}
+.mentorVSreviewer__quote {
+  margin: 0;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  max-width: 432px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.mentorVSreviewer__quoteTitle {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.mentorVSreviewer__quoteText {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.mentorVSreviewer__quoteText_style_bold {
+  font-weight: 500;
+}

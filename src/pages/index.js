@@ -6,7 +6,7 @@ const header = document.querySelector(".header");
 const headerButton = document.querySelector(".header__button");
 const headerNavbar = document.querySelector(".header__navbar");
 const eraserContainer = document.querySelector(".eraserContainer");
-
+// console.log(headerNavbar);
 header.addEventListener("mousemove", (e) => {
   if (e.target === headerButton || e.target === headerNavbar) return;
   const eraser = document.createElement("span");
@@ -42,4 +42,10 @@ setInterval(() => {
   spanToSwitch.classList.add("resp__introSwitch_transitionMode");
   spanToSwitch.textContent = getRandomValue();
   spanToSwitch.classList.remove("resp__introSwitch_transitionMode");
-}, 3000);
+}, 2000);
+
+// ***Реализация появления сообщений при скролле
+
+const anchor = document.querySelector(".mentorVSreviewer__quoteTitle");
+// console.log(anchor.pageY);
+document.addEventListener("scroll", (e) => e.preventDefault());
