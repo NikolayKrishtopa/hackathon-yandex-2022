@@ -19,6 +19,8 @@
 	gap: 48px;
 	flex-direction: column;
 	border-radius: 80px;
+	overflow: hidden;
+	max-width: 1440px;
 }
 
 .stories__title {
@@ -174,12 +176,11 @@
 
 /*=========  galleries  ===========*/
 .galleries {
+	--size: 100vw;
 	display: flex;
-	/* width: 2450px; */
-	/* max-height: 804px; */
-	position: relative;
+	width: calc(var(--size) * 2);
 	/* flex-wrap: wrap; */
-	/* overflow: hidden; */
+	overflow: hidden;
 	position: relative;
 	transition: transform 0.5s ease-in-out;
 }
@@ -340,6 +341,15 @@
 	flex-direction: column;
 }
 .articles__title {
+	margin: 0;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 48px;
+	margin-bottom: 12px;
+}
+
+.storie-portfolio__info-title {
+	letter-spacing: -0.02em;
 	margin: 0;
 	font-weight: 500;
 	font-size: 40px;
