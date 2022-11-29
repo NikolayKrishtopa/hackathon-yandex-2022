@@ -115,42 +115,42 @@ if (spollerArray.length > 0) {
   if (spollerRegulare.length > 0) {
     initSpollers(spollerRegulare);
   }
-}
 
-// Инициализация
+  // Инициализация
 
-// matchMedia добавлен для будущего, если будет введено появление
-// споллера в зависимости от размера экрана
-function initSpollers(spollerArray, matchMedia = false) {
-  spollerArray.forEach((spollersBlock) => {
-    spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
-    if (matchMedia.matches || !matchMedia) {
-      spollersBlock.classList.add("_init");
-      initSpollerBody(spollersBlock);
-      spollersBlock.addEventListener("click", setSpollerAction);
-    } else {
-      spollersBlock.classList.remove("._init");
-      initSpollerBody(spollersBlock, false);
-      spollersBlock.removeentListener("click", setSpollerAction);
-    }
-  });
-}
+  // matchMedia добавлен для будущего, если будет введено появление
+  // споллера в зависимости от размера экрана
+  function initSpollers(spollerArray, matchMedia = false) {
+    spollerArray.forEach((spollersBlock) => {
+      spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+      if (matchMedia.matches || !matchMedia) {
+        spollersBlock.classList.add("_init");
+        initSpollerBody(spollersBlock);
+        spollersBlock.addEventListener("click", setSpollerAction);
+      } else {
+        spollersBlock.classList.remove("_init");
+        initSpollerBody(spollersBlock, false);
+        spollersBlock.removeEventListener("click", setSpollerAction);
+      }
+    });
+  }
 
-// Работа с контентом
-function initSpollerBody(spollersBlock, hidaSpollerBody = true) {
-  const spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
-  if (spollerTitles.length > 0) {
-    spollerTitles.forEach((spollerTitle) => {
-      if (hidaSpollerBody) {
-        spollerTitle.removeAttribute("tabindex");
-        if (!spollerTitle.classList.contains("_active")) {
-          spollerTitle.nextElementSibling.hidden = true;
+  // Работа с контентом
+  function initSpollerBody(spollersBlock, hideSpollerBody = true) {
+    const spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
+    if (spollerTitles.length > 0) {
+      spollerTitles.forEach((spollerTitle) => {
+        if (hideSpollerBody) {
+          spollerTitle.removeAttribute("tabindex");
+          if (!spollerTitle.classList.contains("_active")) {
+            spollerTitle.nextElementSibling.hidden = true;
+          }
         } else {
           spollerTitle.setAttribute("tabindex", "-1");
           spollerTitle.nextElementSibling.hidden = false;
         }
-      }
-    });
+      });
+    }
   }
 }
 
@@ -166,7 +166,7 @@ function setSpollerAction(e) {
       : false;
     if (!spollerBlock.querySelectorAll("._slide").length) {
       if (oneSpoller & !spollerTitle.classList.contains("_active")) {
-        hidaSpollerBody();
+        hideSpollerBody();
       }
       spollerTitle.classList.toggle("_active");
       _slideToggla(spollerTitle.nextElementSibling, 500);
@@ -175,7 +175,7 @@ function setSpollerAction(e) {
   }
 }
 
-function hidaSpollerBody(spollerBlock) {
+function hideSpollerBody(spollerBlock) {
   const spollerActiveTitle = spollerBlock.querySelector(
     "[data-spoller]._active"
   );
@@ -185,6 +185,7 @@ function hidaSpollerBody(spollerBlock) {
   }
 }
 
+// =============  функции анимации  ==============
 let _slideUp = (target, duration = 500) => {
   if (!target.classList.contains("_slide")) {
     target.classList.add("_slide");
@@ -225,7 +226,7 @@ let _slideDown = (target, duration = 500) => {
     target.style.paddingTop = 0;
     target.style.paddingBottom = 0;
     target.style.marginTop = 0;
-    target.style.marginBottom = 0;
+    target.style.marginBottom = 20;
     target.offsetHeight;
     target.style.transitionProperty = "height, margin, padding";
     target.style.transitionDuration = duration + "ms";
