@@ -51,3 +51,55 @@ const anchor = document.querySelector(".mentorVSreviewer__quoteTitle");
 document.addEventListener("scroll", (e) =>
   console.log(anchor.getBoundingClientRect())
 );
+
+// ===== stories =======
+
+// ======= slider gallari ======
+const leftBtn = document.querySelector(".nav__btn_left");
+const rightBtn = document.querySelector(".nav__btn_right");
+const galleries = document.querySelector(".galleries");
+const stories = document.querySelector(".stories");
+const gallery = document.querySelector(".gallery");
+
+//количество слайдов
+const slidesCount = galleries.querySelectorAll(".gall").length;
+
+//активный стайд
+let activeSliderIndex = 0;
+
+leftBtn.addEventListener("click", () => {
+  console.log("left");
+  changeSlide("left");
+});
+
+//слушатель на кнопку вправо
+rightBtn.addEventListener("click", () => {
+  console.log("right");
+  changeSlide("right");
+});
+
+// function nextSlide() {
+//   galleries[currentSlide].className = "gallery";
+//   currentSlide = (currentSlide + 1) % galleries.length;
+//   galleries[currentSlide].className = "gallery showing";
+// }
+
+function changeSlide(direction) {
+  if (direction === "right") {
+    activeSliderIndex++;
+    console.log(activeSliderIndex);
+    if (activeSliderIndex === slidesCount) {
+      activeSliderIndex = 0;
+    }
+  } else if (direction === "left") {
+    activeSliderIndex--;
+    console.log(activeSliderIndex);
+    if (activeSliderIndex < 0) {
+      activeSliderIndex = slidesCount - 1;
+    }
+  }
+  const width = stories.clientWidth;
+  galleries.style.transform = `translateX(-${
+    activeSliderIndex * width * 0.929
+  }px)`;
+}
