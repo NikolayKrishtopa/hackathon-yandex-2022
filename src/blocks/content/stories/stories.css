@@ -193,7 +193,7 @@
 	z-index: 1; */
 }
 
-.gallery1 {
+/* .gallery1 {
 	--size: 100vw;
 	max-height: 804px;
 	width: calc(var(--size) * 0.845);
@@ -207,13 +207,15 @@
 		"big-foto storie storie"
 		"big-foto high-foto1 high-foto2"
 		"article high-foto1 high-foto2";
-}
+} */
 
+.gallery1,
 .gallery2 {
 	--size: 100vw;
 	display: flex;
 	width: calc(var(--size) * 0.845);
 	gap: 32px;
+	margin-bottom: 32px;
 }
 
 .collomn {
@@ -338,6 +340,7 @@
 	flex-direction: column;
 }
 .articles__title {
+	margin: 0;
 	font-weight: 500;
 	font-size: 40px;
 	line-height: 48px;
