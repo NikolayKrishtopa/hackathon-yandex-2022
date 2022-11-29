@@ -200,7 +200,7 @@ let _slideUp = (target, duration = 500) => {
     target.style.marginBottom = 0;
     window.setTimeout(() => {
       target.hidden = true;
-      target.style.removeProperty("heaght");
+      target.style.removeProperty("height");
       target.style.removeProperty("padding-top");
       target.style.removeProperty("padding-bottom");
       target.style.removeProperty("margin-top");
@@ -235,7 +235,7 @@ let _slideDown = (target, duration = 500) => {
     target.style.removeProperty("margin-top");
     target.style.removeProperty("margin-bottom");
     window.setTimeout(() => {
-      target.style.removeProperty("heaght");
+      target.style.removeProperty("heaiht");
       target.style.removeProperty("overflow");
       target.style.removeProperty("transition-duration");
       target.style.removeProperty("transition-property");

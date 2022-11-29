@@ -26,6 +26,7 @@
 	text-align: left;
 	background-color: transparent;
 	position: relative;
+	border: none;
 }
 
 .spoller._init .spoller__title {
