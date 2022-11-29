@@ -1,6 +1,9 @@
 import "./index.css";
+import scrollSelectors from "../utils/config";
+import MentorReviewer from "../blocks/components/MentorReviewer";
 
 // ***Реализация эффекта ластика в хедере***
+// Вариант черновой, отрефакторить на Canvas
 
 const header = document.querySelector(".header");
 const headerButton = document.querySelector(".header__button");
@@ -46,11 +49,8 @@ setInterval(() => {
 
 // ***Реализация появления сообщений при скролле
 
-const anchor = document.querySelector(".mentorVSreviewer__quoteTitle");
-
-document.addEventListener("scroll", (e) =>
-  console.log(anchor.getBoundingClientRect())
-);
+const mentorReviewer = new MentorReviewer(scrollSelectors);
+mentorReviewer.initialize();
 
 // ===== stories =======
 

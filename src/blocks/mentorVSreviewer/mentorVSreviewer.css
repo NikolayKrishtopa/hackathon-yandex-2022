@@ -1,5 +1,5 @@
 .mentorVSreviewer {
-  margin: 0;
+  margin: -80px 0;
   padding: 0;
   width: 100%;
   border-radius: 80px;
@@ -24,7 +24,7 @@
   flex-direction: column;
   position: absolute;
   top: 51px;
-  right: 85px;
+  right: 24px;
   gap: 13px;
 }
 .mentorVSreviewer__icon {
@@ -44,6 +44,13 @@
   position: absolute;
   right: 112px;
   bottom: 128px;
+  align-items: flex-end;
+}
+.mentorVSreviewer__quoteContainer_type_left {
+  right: unset;
+  left: 112px;
+  bottom: 128px;
+  align-items: flex-start;
 }
 .mentorVSreviewer__quote {
   margin: 0;
@@ -53,6 +60,18 @@
   max-width: 432px;
   background-color: #fff;
   border-radius: 12px;
+}
+.mentorVSreviewer__quote_number_1 {
+  max-width: 407px;
+}
+.mentorVSreviewer__quote_number_2 {
+  max-width: 464px;
+}
+.mentorVSreviewer__quote_number_3 {
+  max-width: 406px;
+}
+.mentorVSreviewer__quote_number_4 {
+  max-width: 398px;
 }
 .mentorVSreviewer__quoteTitle {
   margin: 0;
