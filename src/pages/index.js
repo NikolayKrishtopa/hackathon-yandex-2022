@@ -1,6 +1,10 @@
 import "./index.css";
 import scrollSelectors from "../utils/config";
 import MentorReviewer from "../components/MentorReviewer.js";
+import { gsap, ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
+console.log(ScrollTrigger);
 
 // ***Реализация эффекта ластика в хедере***
 // Вариант черновой, отрефакторить на Canvas
@@ -9,7 +13,6 @@ const header = document.querySelector(".header");
 const headerButton = document.querySelector(".header__button");
 const headerNavbar = document.querySelector(".header__navbar");
 const eraserContainer = document.querySelector(".eraserContainer");
-// console.log(headerNavbar);
 header.addEventListener("mousemove", (e) => {
   if (e.target === headerButton || e.target === headerNavbar) return;
   const eraser = document.createElement("span");
@@ -49,6 +52,19 @@ setInterval(() => {
 
 // ***Реализация появления сообщений при скролле
 
+const quote1 = document.querySelector(".mentorVSreviewer__quote_number_1");
+const quote2 = document.querySelector(".mentorVSreviewer__quote_number_2");
+const quote3 = document.querySelector(".mentorVSreviewer__quote_number_3");
+const quote4 = document.querySelector(".mentorVSreviewer__quote_number_4");
+
+// gsap.from(".mentorVSreviewer__quote_number_1", {
+//   ScrollTrigger: {
+//     trigger: ".mentorVSreviewer__quote_number_1",
+//     toggleActions: "restart none none none",
+//   },
+//   x: 1000,
+//   duration: 3,
+// });
 const mentorReviewer = new MentorReviewer(scrollSelectors);
 mentorReviewer.initialize();
 

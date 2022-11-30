@@ -9,6 +9,7 @@ const scrollSelectors = {
   quotesContainer: ".mentorVSreviewer__quoteContainer",
   quotesContainerLeftClass: "mentorVSreviewer__quoteContainer_type_left",
   quotesSelector: ".mentorVSreviewer__quoteText",
+  quoteBlocks: ".mentorVSreviewer__quote",
   mentorName: "Аня Сорокина",
   reviewerName: "Максим Гордеев",
   mentorTitleText: "Чем занимается наставник?",
