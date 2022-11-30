@@ -97,7 +97,8 @@
                 </div>
               </li>
             </ul>
-            <img src="<%=require('./src/images/expert-info-image.svg')%>" alt="Фоновое изображение" class="expert-info__image">
+            <img src="<%=require('./src/images/expert-info-image.svg')%>" alt="Фоновое изображение"
+              class="expert-info__image">
           </div>
         </div>
       </section>
@@ -410,110 +411,185 @@
         </div>
       </section>
       <section class="apply">
-    <h2 class="apply__title">Не нашли себя в открытых предложениях?</h2>
-    <p class="apply__subtitle">Оставляйте заявку и мы обязательно с вами свяжемся</p>
-    <img src="<%=require('./src/images/group-of-figures.png')%>" alt="Группа фигур" class="apply__image">
-    <a href="#" class="apply__button">Хочу делиться знаниями</a>
-       </section>
+        <h2 class="apply__title">Не нашли себя в открытых предложениях?</h2>
+        <p class="apply__subtitle">Оставляйте заявку и мы обязательно с вами свяжемся</p>
+        <img src="<%=require('./src/images/group-of-figures.png')%>" alt="Группа фигур" class="apply__image">
+        <a href="#" class="apply__button">Хочу делиться знаниями</a>
+      </section>
+      <section class="questions-answers">
+        <div class="questions-answers__conteiner">
+          <h2 class="questions-answers__title">Сложно решиться?</h2>
+          <div data-spollers data-one-spoller class="spollers">
+            <div class="spoller">
+              <button class="spoller__title" tabindex="-1" type="button" data-spoller>А это точно не будет
+                отнимать много
+                времени?
+              </button>
+              <div class="spoller__text">В среднем у начинающих наставников и ревьюеров работа в Практикуме занимает 2—3
+                часа в день.
+                Вебинары проводим по вечерам, их можно совместить с концом рабочего дня. А подготовку материалов
+                оставить
+                на выходные. В любом случае, если возникают сложности — коллеги-наставники и команда Практикума всегда
+                рядом.
+              </div>
+            </div>
+            <div class="spoller">
+              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Публичные
+                выступления для меня челлендж, вдруг не справлюсь?
+              </button>
+              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, delectus
+                dolor velit molestias tempora ullam a aperiam cupiditate facere voluptatem ab amet doloremque ducimus
+                quaerat fugit eum excepturi deserunt aspernatur.
+              </div>
+            </div>
+            <div class="spoller">
+              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Делать все умею, а
+                вот объяснять... Что, если не получится?
+              </button>
+              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur
+
+              </div>
+            </div>
+            <div class="spoller">
+              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Я самоучка и не
+                знаю, как правильно преподносить теорию
+              </button>
+              <div class="spoller__text">В среднем у начинающих наставников и ревьюеров работа в Практикуме занимает 2—3
+                часа в день.
+                Вебинары проводим по вечерам, их можно совместить с концом рабочего дня. А подготовку материалов
+                оставить
+                на выходные. В любом случае, если возникают сложности — коллеги-наставники и команда Практикума всегда
+                рядом.
+              </div>
+            </div>
+            <div class="spoller">
+              <button class="spoller__title" tabindex="-1" type="button" data-spoller>А что, если работы
+                будут скучные, а студенты — неактивные?
+              </button>
+              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestias ipsa
+                facilis iste voluptates voluptatem deleniti ut vel reprehenderit inventore ad at, vero dignissimos ullam
+                maiores sit, dolore corporis tenetur?
+              </div>
+            </div>
+            <div class="spoller">
+              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Я могу быть
+                наставником или ревьюером, если живу не в России?
+              </button>
+              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse accusantium
+                repellendus vero deserunt sunt sequi enim id voluptatum! Ullam vero quae delectus praesentium modi rem
+                similique beatae rerum accusamus?
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
     </main>
-  <footer class="footer">
-    <div class="footer__logo-container">
-      <a href="#" class="footer__link">
-        <img src="<%=require('./src/images/white-long-yandex-praktikum-logo.svg')%>" alt="Логотип Яндекс Практикума" class="footer__logo">
-      </a>
-      <div class="footer__phone-container">
-        <a href="tel:+78007009329" class="footer__phone footer__link">8-800-700-93-29</a>
-        <p class="footer__phone-subtitle">Звонок по России бесплатный</p>
+    <footer class="footer">
+      <div class="footer__logo-container">
+        <a href="#" class="footer__link">
+          <img src="<%=require('./src/images/white-long-yandex-praktikum-logo.svg')%>" alt="Логотип Яндекс Практикума"
+            class="footer__logo">
+        </a>
+        <div class="footer__phone-container">
+          <a href="tel:+78007009329" class="footer__phone footer__link">8-800-700-93-29</a>
+          <p class="footer__phone-subtitle">Звонок по России бесплатный</p>
+        </div>
+        <nav>
+          <ul class="footer__social-container footer__list">
+            <li>
+              <a href="#" class="footer__social-link footer__link">
+                <img src="<%=require('./src/images/telegram-logo.svg')%>" alt="Логотип Телеграма"
+                  class="footer__social-icon">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link footer__link">
+                <img src="<%=require('./src/images/dzen-logo.svg')%>" alt="Логотип Дзена" class="footer__social-icon">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link footer__link">
+                <img src="<%=require('./src/images/VK-logo.svg')%>" alt="Логотип Вконтакте" class="footer__social-icon">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link footer__link">
+                <img src="<%=require('./src/images/youtube-logo.svg')%>" alt="Логотип Ютуба"
+                  class="footer__social-icon">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link footer__link">
+                Журнал
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul class="footer__social-container footer__list">
-          <li>
-            <a href="#" class="footer__social-link footer__link">
-              <img src="<%=require('./src/images/telegram-logo.svg')%>" alt="Логотип Телеграма" class="footer__social-icon">
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__social-link footer__link">
-              <img src="<%=require('./src/images/dzen-logo.svg')%>" alt="Логотип Дзена" class="footer__social-icon">
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__social-link footer__link">
-              <img src="<%=require('./src/images/VK-logo.svg')%>" alt="Логотип Вконтакте" class="footer__social-icon">
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__social-link footer__link">
-              <img src="<%=require('./src/images/youtube-logo.svg')%>" alt="Логотип Ютуба" class="footer__social-icon">
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__social-link footer__link">
-              Журнал
-            </a>
-          </li>
+      <nav class="footer__menu">
+        <ul class="footer__link-container footer__list">
+          <div class="footer__link-column">
+            <li>
+              <a href="#" class="footer__menu-link footer__link">
+                Помощь
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__menu-link footer__link">
+                Для СМИ
+              </a>
+            </li>
+          </div>
+          <div class="footer__link-column">
+            <li>
+              <a href="#" class="footer__menu-link footer__link">
+                Отзывы
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__menu-link footer__link">
+                Лицензия
+              </a>
+            </li>
+          </div>
+          <div class="footer__link-column">
+            <li>
+              <a href="#" class="footer__menu-link footer__link">
+                Помощь
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__menu-link footer__link">
+                Для СМИ
+              </a>
+            </li>
+          </div>
         </ul>
       </nav>
-    </div>
-    <nav class="footer__menu">
-      <ul class="footer__link-container footer__list">
-        <div class="footer__link-column">
-          <li>
-            <a href="#" class="footer__menu-link footer__link">
-              Помощь
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__menu-link footer__link">
-              Для СМИ
-            </a>
-          </li>
-        </div>
-        <div class="footer__link-column">
-          <li>
-            <a href="#" class="footer__menu-link footer__link">
-              Отзывы
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__menu-link footer__link">
-              Лицензия
-            </a>
-          </li>
-        </div>
-        <div class="footer__link-column">
-          <li>
-            <a href="#" class="footer__menu-link footer__link">
-              Помощь
-            </a>
-          </li>
-          <li>
-            <a href="#" class="footer__menu-link footer__link">
-              Для СМИ
-            </a>
-          </li>
-        </div>
-      </ul>
-    </nav>
-    <div class="footer__copyright-container">
-      <p class="footer__paragraph">
-        Информация на&nbsp;данной странице описывает возможные варианты получения дополнительного дохода в&nbsp;месяц (т.н. подработка).
-        Не&nbsp;является предложением о&nbsp;работе. Размещенные объявления о&nbsp;потребности в&nbsp;тех или иных услугах не&nbsp;являются вакансиями.
-      </p>
-      <p class="footer__paragraph">
-        Образовательные услуги оказываются АНО ДПО &laquo;ШАД&raquo;. Это Школа анализа данных, основанная Яндексом.
-        Оказывает услуги на&nbsp;основании Лицензии &#8470; 036031 от&nbsp;24&nbsp;марта 2015&nbsp;года.
-        Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также выдается АНО ДПО &laquo;ШАД&raquo;.
-      </p>
-      <p class="footer__paragraph">
-        Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также выдаётся АНО ДПО &laquo;ШАД&raquo;.
-      </p>
-      <p class="footer__paragraph">
-        &copy;&nbsp;2022&nbsp;АНО ДПО &laquo;ШАД&raquo;, ООО &laquo;Яндекс&raquo;
-      </p>
-    </div>
-  </footer>
-</div>
+      <div class="footer__copyright-container">
+        <p class="footer__paragraph">
+          Информация на&nbsp;данной странице описывает возможные варианты получения дополнительного дохода в&nbsp;месяц
+          (т.н. подработка).
+          Не&nbsp;является предложением о&nbsp;работе. Размещенные объявления о&nbsp;потребности в&nbsp;тех или иных
+          услугах не&nbsp;являются вакансиями.
+        </p>
+        <p class="footer__paragraph">
+          Образовательные услуги оказываются АНО ДПО &laquo;ШАД&raquo;. Это Школа анализа данных, основанная Яндексом.
+          Оказывает услуги на&nbsp;основании Лицензии &#8470; 036031 от&nbsp;24&nbsp;марта 2015&nbsp;года.
+          Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также
+          выдается АНО ДПО &laquo;ШАД&raquo;.
+        </p>
+        <p class="footer__paragraph">
+          Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также
+          выдаётся АНО ДПО &laquo;ШАД&raquo;.
+        </p>
+        <p class="footer__paragraph">
+          &copy;&nbsp;2022&nbsp;АНО ДПО &laquo;ШАД&raquo;, ООО &laquo;Яндекс&raquo;
+        </p>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
