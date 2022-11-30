@@ -1,6 +1,6 @@
 import "./index.css";
 import scrollSelectors from "../utils/config";
-import MentorReviewer from "../components/MentorReviewer";
+import MentorReviewer from "../components/MentorReviewer.js";
 
 // ***Реализация эффекта ластика в хедере***
 // Вариант черновой, отрефакторить на Canvas
@@ -79,7 +79,7 @@ rightBtn.addEventListener("click", () => {
 function changeSlide(direction) {
   if (direction === "right") {
     activeSliderIndex >= 1 ? false : activeSliderIndex++;
-    console.log(activeSliderIndex);
+    // console.log(activeSliderIndex);
     if (activeSliderIndex === slidesCount) {
       activeSliderIndex = 0;
     }
