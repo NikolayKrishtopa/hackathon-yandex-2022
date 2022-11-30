@@ -22,6 +22,7 @@
   align-items: center;
 }
 .quiz__title {
+  font-family: "YS Text";
   font-weight: 500;
   font-size: 48px;
   line-height: 48px;
@@ -30,6 +31,7 @@
   margin-bottom: 12px;
 }
 .quiz__subtitle {
+  font-family: "YS Text";
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -83,6 +85,7 @@
 .cooperation-terms__pixel-icon {
 }
 .card__title {
+  font-family: "YS Text";
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
@@ -91,6 +94,7 @@
   margin: 32px 0;
 }
 .card__subtitle {
+  font-family: "YS Text";
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -119,12 +123,17 @@
   border: 2px solid #000;
 }
 
+.button-pressed {
+  color: #000;
+  border: 2px solid #000;
+}
+
 .card__button-end,
 .card-result__buttons-more {
   width: 100%;
   display: inline-block;
   border-radius: 120px;
-  background: #000000;
+  background: #eaeaea;
   padding: 12px 20px;
   border: 0;
   font-weight: 500;
@@ -138,8 +147,17 @@
 }
 
 .card__button-end:hover,
-.card__button-end:active {
-  background: #29cb64;
+.card-result__buttons-more:hover {
+  background: #555555;
+}
+
+.card__button-end:active,
+.card-result__buttons-more:active {
+  background: #373737;
+}
+
+.button-end__active {
+  background: #000000;
 }
 
 .quiz__card-second {
@@ -167,6 +185,7 @@
 }
 
 .card-result__item__title {
+  font-family: "YS Text";
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
@@ -174,6 +193,7 @@
 }
 
 .card-result__item__text {
+  font-family: "YS Text";
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -195,14 +215,11 @@
 
 .card-result__buttons-more {
   width: auto;
+  font-family: "YS Text";
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   padding: 20px 56.5px;
-}
-.card-result__buttons-more:hover,
-.card-result__buttons-more:active {
-  background: #29cb64;
 }
 
 .card-result__buttons-repeat {
