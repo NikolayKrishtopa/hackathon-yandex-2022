@@ -99,6 +99,7 @@ function changeSlide(direction) {
 // ***============= questions ====================
 
 const spollerArray = document.querySelectorAll("[data-spollers]");
+
 if (spollerArray.length > 0) {
   // Получение обычных споллеров
   const spollerRegulare = Array.from(spollerArray).filter(function (
@@ -249,3 +250,115 @@ let _slideToggla = (target, duration = 500) => {
     return _slideUp(target, duration);
   }
 };
+
+// ==========  quiz ============
+
+// блок первой карточки
+const firstCard = document.querySelector(".quiz__card-first");
+const buttonFirstCardBtn = document
+  .querySelector(".quiz__card-first")
+  .querySelectorAll(".card__button");
+
+// блок второй карточки
+const secondCardClose = document.querySelector(
+  ".quiz__card-second.quiz__card-close"
+);
+const secondCardOpen = document.querySelector(".quiz__card-second");
+const buttonSecondCardBtn = document
+  .querySelector(".quiz__card-second")
+  .querySelectorAll(".card__button");
+
+// блок третьей карточки
+const thirdCardClose = document.querySelector(
+  ".quiz__card-third.quiz__card-close"
+);
+const thirdCardOpen = document.querySelector(".quiz__card-third");
+const buttonThirdCard = document
+  .querySelector(".quiz__card-third")
+  .querySelectorAll(".card__button");
+
+// блок карточки с результатами
+const cardResalt = document.querySelector(".quiz__card-result");
+const buttonCardResalt = document.querySelector(".card__button-end");
+const buttonRepeat = document.querySelector(".card-result__buttons-repeat");
+
+// для будущей логики
+let arr1 = [];
+let arr2 = [];
+let arr3 = [];
+let programming = document.getElementById("programming").id;
+
+// нажатие кнопок кнопок из первой карточки
+function ArrayFirstCard() {
+  buttonFirstCardBtn.forEach((el) => {
+    arr1.push(el.id);
+    el.addEventListener("click", setCardSecondAction);
+    function setCardSecondAction() {
+      el.classList.add("button-pressed");
+      secondCardClose.classList.add("disconnect");
+      secondCardOpen.classList.remove("disconnect");
+    }
+  });
+}
+
+ArrayFirstCard();
+
+// нажатие кнопок из второй карточки карточки
+function ArraySecondCard() {
+  buttonSecondCardBtn.forEach((el) => {
+    arr2.push(el.id);
+    el.addEventListener("click", setCardTherdAction);
+    function setCardTherdAction() {
+      el.classList.add("button-pressed");
+      thirdCardClose.classList.add("disconnect");
+      thirdCardOpen.classList.remove("disconnect");
+    }
+  });
+}
+
+// нажатие кнопок из третьей карточки карточки
+function ArrayThidrCard() {
+  buttonThirdCard.forEach((el) => {
+    arr3.push(el.id);
+    el.addEventListener("click", () => {
+      el.classList.add("button-pressed");
+      buttonCardResalt.classList.add("button-end__active");
+      buttonCardResalt.addEventListener("click", setReasalt);
+    });
+    function setReasalt() {
+      firstCard.classList.add("disconnect");
+      secondCardOpen.classList.add("disconnect");
+      thirdCardOpen.classList.add("disconnect");
+      cardResalt.classList.remove("disconnect");
+    }
+  });
+}
+
+// нажатие кнопки возврата
+function Repeat() {
+  buttonRepeat.addEventListener("click", () => {
+    buttonFirstCardBtn.forEach((el) => {
+      el.classList.remove("button-pressed");
+    });
+    buttonSecondCardBtn.forEach((el) => {
+      el.classList.remove("button-pressed");
+    });
+    buttonSecondCardBtn.forEach((el) => {
+      el.classList.remove("button-pressed");
+    });
+    cardResalt.classList.add("disconnect");
+    firstCard.classList.remove("disconnect");
+    secondCardClose.classList.remove("disconnect");
+    thirdCardClose.classList.remove("disconnect");
+  });
+}
+
+ArrayFirstCard();
+ArraySecondCard();
+ArrayThidrCard();
+Repeat();
+// console.log("programming", programming);
+
+// функция открытия второй карточки
+
+// ========== конец блока quiz ============

@@ -307,34 +307,38 @@
           </div>
           <div class="quiz__cards">
             <div class="quiz__card quiz__card-first">
-              <div class="card__namber"><img src="<%=require('./src/images/first-number.svg')%>" alt="Карточка номер 1"
-                  class="cooperation-terms__pixel-icon"></div>
+              <div class="card__namber">
+                <img src="<%=require('./src/images/first-number.svg')%>" alt="Карточка номер 1"
+                  class="cooperation-terms__pixel-icon">
+              </div>
               <div class="card__title">В какой сфере <br />ты профи?</div>
               <div class="card__buttons">
-                <button class="card__button">Программирование</button>
-                <button class="card__button">Анализ данных</button>
-                <button class="card__button">Дизайн</button>
-                <button class="card__button">Маркетинг</button>
-                <button class="card__button">Менеджмент</button>
+                <button id="programming" class="card__button">Программирование</button>
+                <button id="analysis" class="card__button">Анализ данных</button>
+                <button id="design" class="card__button">Дизайн</button>
+                <button id="marketing" class="card__button">Маркетинг</button>
+                <button id="management" class="card__button">Менеджмент</button>
               </div>
             </div>
             <div class="disconnect quiz__card   quiz__card-second">
-              <div class="card__namber"><img src="<%=require('./src/images/second-number-active.svg')%>"
-                  alt="Карточка номер 2" class="cooperation-terms__pixel-icon">
+              <div class="card__namber">
+                <img src="<%=require('./src/images/second-number-active.svg')%>" alt="Карточка номер 2"
+                  class="cooperation-terms__pixel-icon">
               </div>
               <div class="card__title">Что тебе интереснее? </div>
               <div class="card__buttons">
-                <div class="card__button">Выступать публично</div>
-                <div class="card__button">Проверять работы</div>
-                <div class="card__button">Вдохновлять</div>
-                <div class="card__button">Общаться</div>
-                <div class="card__button">Объяснять ошибки</div>
+                <div id="interesting" class="card__button">Выступать публично</div>
+                <div id="check" class="card__button">Проверять работы</div>
+                <div id="inspiration" class="card__button">Вдохновлять</div>
+                <div id="сommunication" class="card__button">Общаться</div>
+                <div id="explanation" class="card__button">Объяснять ошибки</div>
               </div>
             </div>
             <div class=" quiz__card quiz__card-close quiz__card-second ">
               <div class="card__conteiner">
-                <div class="card__namber "><img src="<%=require('./src/images/second_number.svg')%>"
-                    alt="Карточка номер 2 неоткрыта" class="cooperation-terms__pixel-icon">
+                <div class="card__namber ">
+                  <img src="<%=require('./src/images/second_number.svg')%>" alt="Карточка номер 2 неоткрыта"
+                    class="cooperation-terms__pixel-icon">
                 </div>
                 <p class="card__title-disconnect">Карточка откроется после ответа<br /> на предыдущий вопрос
                 </p>
@@ -348,10 +352,10 @@
               </div>
               <div class="card__title">Какой у тебя опыт работы? </div>
               <div class="card__buttons">
-                <div class="card__button">1—2 года</div>
-                <div class="card__button">2—5 лет</div>
-                <div class="card__button">5—7 лет</div>
-                <div class="card__button">Больше 7 лет</div>
+                <div id="1" class="card__button">1—2 года</div>
+                <div id="2" class="card__button">2—5 лет</div>
+                <div id="5" class="card__button">5—7 лет</div>
+                <div id="7" class="card__button">Больше 7 лет</div>
               </div>
               <div class="card__button-end">Узнать результат</div>
             </div>

@@ -123,12 +123,17 @@
 	border: 2px solid #000;
 }
 
+.button-pressed {
+	color: #000;
+	border: 2px solid #000;
+}
+
 .card__button-end,
 .card-result__buttons-more {
 	width: 100%;
 	display: inline-block;
 	border-radius: 120px;
-	background: #000000;
+	background: #eaeaea;
 	padding: 12px 20px;
 	border: 0;
 	font-weight: 500;
@@ -142,8 +147,17 @@
 }
 
 .card__button-end:hover,
-.card__button-end:active {
-	background: #29cb64;
+.card-result__buttons-more:hover {
+	background: #555555;
+}
+
+.card__button-end:active,
+.card-result__buttons-more:active {
+	background: #373737;
+}
+
+.button-end__active {
+	background: #000000;
 }
 
 .quiz__card-second {
@@ -206,10 +220,6 @@
 	font-size: 16px;
 	line-height: 20px;
 	padding: 20px 56.5px;
-}
-.card-result__buttons-more:hover,
-.card-result__buttons-more:active {
-	background: #29cb64;
 }
 
 .card-result__buttons-repeat {
