@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 132px 112px 160px;
+  padding: 140px 112px 160px;
   box-sizing: border-box;
 }
 
@@ -13,7 +13,9 @@
   font-size: 48px;
   line-height: 48px;
   letter-spacing: -0.02em;
+  margin: 0;
   margin-bottom: 56px;
+  text-align: center;
 }
 
 .spollers {
@@ -47,17 +49,18 @@
 
 .spollers._init .spoller__title {
   padding: 0;
+  height: 44px;
 }
 
 .spollers._init .spoller__title::before,
 .spollers._init .spoller__title::after {
   content: "";
-  width: 20px;
-  height: 2px;
+  width: 26px;
+  height: 3.67px;
   background-color: #000;
   position: absolute;
   right: 10px;
-  top: 13px;
+  top: 20px;
   transition: transform 0.3s ease 0s;
 }
 
@@ -67,4 +70,17 @@
 
 .spollers._init .spoller__title._active::after {
   transform: rotate(0deg);
+}
+
+.spoller__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  background-image: repeating-linear-gradient(45deg, #858585, #858585 100px);
+  background-repeat: repeat-x;
+  background-position: bottom 0px right 33px;
+  background-position: bottom 20px;
+  background-size: 100% 1px;
+  padding-bottom: 20px;
+  padding-bottom: 20px;
 }
