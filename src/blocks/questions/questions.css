@@ -53,11 +53,11 @@
 .spollers._init .spoller__title::after {
   content: "";
   width: 20px;
-  height: 1px;
+  height: 2px;
   background-color: #000;
   position: absolute;
   right: 10px;
-  top: 20px;
+  top: 13px;
   transition: transform 0.3s ease 0s;
 }
 
