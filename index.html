@@ -13,12 +13,16 @@
   <div class="page">
     <header class="header">
       <div class="header__navbar">
-        <img src="<%=require('./src/img/logo.png')%>" alt="Логотип Яндекс Практикум" class="header__logo">
+        <a href="https://practicum.yandex.ru/" target="_blank">
+          <img src="<%=require('./src/img/logo.png')%>" alt="Логотип Яндекс Практикум" class="header__logo">
+        </a>
         <div class="header__linksBlock">
-          <a href="#" class="header__link">Дизайн</a>
-          <a href="#" class="header__link">Маркетинг</a>
-          <a href="#" class="header__link">Менеджмент</a>
-          <button class="header__navBlockButton">Оставить заявку</button>
+          <a href="#resp" class="header__link">Сотрудничество</a>
+          <a href="#" class="header__link">Открытые позиции</a>
+          <a href="#stories" class="header__link">Истории экспертов</a>
+          <a href="#quiz" class="header__link">Что подойдет мне</a>
+          <a href="#" class="header__link">FAQ</a>
+          <button class="header__navBlockButton">Откликнуться</button>
         </div>
       </div>
       <h1 class="header__title">Станьте экспертом</h1>
@@ -27,8 +31,8 @@
       <div class="eraserContainer"></div>
     </header>
     <main class="content">
-      <section class="resp">
-        <div class="resp__intro">
+      <section class="resp__intro" >
+        <div class="resp__introContent">
           <p class="resp__introHeading">
             Яндекс.Практикум
           </p>
@@ -38,7 +42,10 @@
             Мы помогаем изменить свою профессиональную жизнь
             в&nbsp;<span class="resp__introSwitch">программировании</span>
           </p>
-        </div>
+      </div>
+      </section>
+      <section class="resp" id="resp">
+
         <h2 class="resp__title">В роли наставника и&nbsp;ревьюера вы&nbsp;будете:</h2>
         <ul class="resp__list">
           <!-- <img src="<%=require('./src/img/man.png')%>" alt="Рисунок забавного человечка" class="resp__pic"> -->
@@ -76,30 +83,28 @@
       <section class="expert-info">
         <div class="expert-info__steps-container">
           <h1 class="expert-info__title">Как стать экспертом</h1>
-          <div class="expert-info__step-image-container">
-            <ul class="expert-info__steps-list">
-              <li class="expert-info__step">
-                <div class="expert-info__step-container">
-                  <div class="expert-info__step-number">1</div>
-                  <h3 class="expert-info__step-title">Выберете роль и&nbsp;заполните заявку</h3>
-                </div>
-              </li>
-              <li class="expert-info__step">
-                <div class="expert-info__step-container">
-                  <div class="expert-info__step-number">2</div>
-                  <h3 class="expert-info__step-title">Пройдите отбор и&nbsp;бесплатное обучение</h3>
-                </div>
-              </li>
-              <li class="expert-info__step">
-                <div class="expert-info__step-container">
-                  <div class="expert-info__step-number">3</div>
-                  <h3 class="expert-info__step-title">Можно начинать делиться знаниями</h3>
-                </div>
-              </li>
-            </ul>
-            <img src="<%=require('./src/images/expert-info-image.svg')%>" alt="Фоновое изображение"
-              class="expert-info__image">
-          </div>
+          <ul class="expert-info__steps-list">
+            <li class="expert-info__step">
+              <div class="expert-info__step-container">
+                <div class="expert-info__step-number">1</div>
+                <h3 class="expert-info__step-title">Выберете роль и&nbsp;заполните заявку</h3>
+              </div>
+              <img src="<%=require('./src/images/upside-down-man-illustration.svg')%>" alt="Иллюстрация с перевернутым человеком" class="expert-info__step-image expert-info__step-image_type_upside-down-man">
+            </li>
+            <li class="expert-info__step">
+              <div class="expert-info__step-container">
+                <div class="expert-info__step-number">2</div>
+                <h3 class="expert-info__step-title">Пройдите отбор и&nbsp;бесплатное обучение</h3>
+              </div>
+            </li>
+            <li class="expert-info__step">
+              <div class="expert-info__step-container">
+                <div class="expert-info__step-number">3</div>
+                <h3 class="expert-info__step-title">Можно начинать делиться знаниями</h3>
+              </div>
+              <img src="<%=require('./src/images/cross-legged-man-illustration.svg')%>" alt="Иллюстрация человека, со скрещенными ногами" class="expert-info__step-image expert-info__step-image_type_cross-legged-man">
+            </li>
+          </ul>
         </div>
       </section>
       <section class="mentorVSreviewer">
@@ -160,9 +165,9 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="cooperation-terms__button">Хочу делиться знаниями</a>
+        <!-- <a href="#" class="cooperation-terms__button">Хочу делиться знаниями</a> -->
       </section>
-      <section class="stories">
+      <section class="stories" id="stories">
         <div class="stories__header">
           <h2 class="stories__title">Истории ребят из&nbsp;команды</h2>
           <div class="galleries-nav">
@@ -299,17 +304,18 @@
           </div>
         </div>
       </section>
-      <section class="quiz">
+      <section class="quiz" id="quiz">
         <div class="quiz__conteiner">
           <div class="quiz__header">
-            <div class="quiz__title">Кем ты можешь стать <br />в Практикуме?</div>
-            <div class="quiz__subtitle">Поможем понять за 5 минут</div>
+            <p class="quiz__title">Кем ты можешь стать <br />в Практикуме?</з>
+            <p class="quiz__subtitle">Поможем понять за 5 минут</p>
           </div>
           <div class="quiz__cards">
             <div class="quiz__card quiz__card-first">
               <div class="card__namber"><img src="<%=require('./src/images/first-number.svg')%>" alt="Карточка номер 1"
-                  class="cooperation-terms__pixel-icon"></div>
-              <div class="card__title">В какой сфере <br />ты профи?</div>
+                  class="cooperation-terms__pixel-icon">
+              </div>
+              <p class="card__title">В какой сфере <br />ты профи?</p>
               <div class="card__buttons">
                 <button class="card__button">Программирование</button>
                 <button class="card__button">Анализ данных</button>
@@ -409,187 +415,114 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="apply">
-        <h2 class="apply__title">Не нашли себя в открытых предложениях?</h2>
-        <p class="apply__subtitle">Оставляйте заявку и мы обязательно с вами свяжемся</p>
-        <img src="<%=require('./src/images/group-of-figures.png')%>" alt="Группа фигур" class="apply__image">
-        <a href="#" class="apply__button">Хочу делиться знаниями</a>
-      </section>
-      <section class="questions-answers">
-        <div class="questions-answers__conteiner">
-          <h2 class="questions-answers__title">Сложно решиться?</h2>
-          <div data-spollers data-one-spoller class="spollers">
-            <div class="spoller">
-              <button class="spoller__title" tabindex="-1" type="button" data-spoller>А это точно не будет
-                отнимать много
-                времени?
-              </button>
-              <div class="spoller__text">В среднем у начинающих наставников и ревьюеров работа в Практикуме занимает 2—3
-                часа в день.
-                Вебинары проводим по вечерам, их можно совместить с концом рабочего дня. А подготовку материалов
-                оставить
-                на выходные. В любом случае, если возникают сложности — коллеги-наставники и команда Практикума всегда
-                рядом.
-              </div>
-            </div>
-            <div class="spoller">
-              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Публичные
-                выступления для меня челлендж, вдруг не справлюсь?
-              </button>
-              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, delectus
-                dolor velit molestias tempora ullam a aperiam cupiditate facere voluptatem ab amet doloremque ducimus
-                quaerat fugit eum excepturi deserunt aspernatur.
-              </div>
-            </div>
-            <div class="spoller">
-              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Делать все умею, а
-                вот объяснять... Что, если не получится?
-              </button>
-              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur
 
-              </div>
-            </div>
-            <div class="spoller">
-              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Я самоучка и не
-                знаю, как правильно преподносить теорию
-              </button>
-              <div class="spoller__text">В среднем у начинающих наставников и ревьюеров работа в Практикуме занимает 2—3
-                часа в день.
-                Вебинары проводим по вечерам, их можно совместить с концом рабочего дня. А подготовку материалов
-                оставить
-                на выходные. В любом случае, если возникают сложности — коллеги-наставники и команда Практикума всегда
-                рядом.
-              </div>
-            </div>
-            <div class="spoller">
-              <button class="spoller__title" tabindex="-1" type="button" data-spoller>А что, если работы
-                будут скучные, а студенты — неактивные?
-              </button>
-              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestias ipsa
-                facilis iste voluptates voluptatem deleniti ut vel reprehenderit inventore ad at, vero dignissimos ullam
-                maiores sit, dolore corporis tenetur?
-              </div>
-            </div>
-            <div class="spoller">
-              <button class="spoller__title" tabindex="-1" type="button" data-spoller>Я могу быть
-                наставником или ревьюером, если живу не в России?
-              </button>
-              <div class="spoller__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse accusantium
-                repellendus vero deserunt sunt sequi enim id voluptatum! Ullam vero quae delectus praesentium modi rem
-                similique beatae rerum accusamus?
-              </div>
-            </div>
-          </div>
-        </div>
 
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__logo-container">
-        <a href="#" class="footer__link">
-          <img src="<%=require('./src/images/white-long-yandex-praktikum-logo.svg')%>" alt="Логотип Яндекс Практикума"
-            class="footer__logo">
-        </a>
-        <div class="footer__phone-container">
-          <a href="tel:+78007009329" class="footer__phone footer__link">8-800-700-93-29</a>
-          <p class="footer__phone-subtitle">Звонок по России бесплатный</p>
-        </div>
-        <nav>
-          <ul class="footer__social-container footer__list">
-            <li>
-              <a href="#" class="footer__social-link footer__link">
-                <img src="<%=require('./src/images/telegram-logo.svg')%>" alt="Логотип Телеграма"
-                  class="footer__social-icon">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer__social-link footer__link">
-                <img src="<%=require('./src/images/dzen-logo.svg')%>" alt="Логотип Дзена" class="footer__social-icon">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer__social-link footer__link">
-                <img src="<%=require('./src/images/VK-logo.svg')%>" alt="Логотип Вконтакте" class="footer__social-icon">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer__social-link footer__link">
-                <img src="<%=require('./src/images/youtube-logo.svg')%>" alt="Логотип Ютуба"
-                  class="footer__social-icon">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer__social-link footer__link">
-                Журнал
-              </a>
-            </li>
-          </ul>
-        </nav>
+  </section>
+    <section class="apply">
+      <h2 class="apply__title">Не нашлось подходящей позиции?</h2>
+      <p class="apply__subtitle">Мы верим, что люди — главная ценность, поэтому всегда открыты к предложениям</p>
+      <img src="<%=require('./src/images/group-of-figures.png')%>" alt="Группа фигур" class="apply__image">
+      <a href="#" class="apply__button">Хочу стать частью Практикума</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo-container">
+      <a href="#" class="footer__link">
+        <img src="<%=require('./src/images/white-long-yandex-praktikum-logo.svg')%>" alt="Логотип Яндекс Практикума" class="footer__logo">
+      </a>
+      <div class="footer__phone-container">
+        <a href="tel:+78007009329" class="footer__phone footer__link">8-800-700-93-29</a>
+        <p class="footer__phone-subtitle">Звонок по России бесплатный</p>
       </div>
-      <nav class="footer__menu">
-        <ul class="footer__link-container footer__list">
-          <div class="footer__link-column">
-            <li>
-              <a href="#" class="footer__menu-link footer__link">
-                Помощь
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer__menu-link footer__link">
-                Для СМИ
-              </a>
-            </li>
-          </div>
-          <div class="footer__link-column">
-            <li>
-              <a href="#" class="footer__menu-link footer__link">
-                Отзывы
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer__menu-link footer__link">
-                Лицензия
-              </a>
-            </li>
-          </div>
-          <div class="footer__link-column">
-            <li>
-              <a href="#" class="footer__menu-link footer__link">
-                Помощь
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer__menu-link footer__link">
-                Для СМИ
-              </a>
-            </li>
-          </div>
+      <nav>
+        <ul class="footer__social-container footer__list">
+          <li>
+            <a href="#" class="footer__social-link footer__link">
+              <img src="<%=require('./src/images/telegram-logo.svg')%>" alt="Логотип Телеграма" class="footer__social-icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__social-link footer__link">
+              <img src="<%=require('./src/images/dzen-logo.svg')%>" alt="Логотип Дзена" class="footer__social-icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__social-link footer__link">
+              <img src="<%=require('./src/images/VK-logo.svg')%>" alt="Логотип Вконтакте" class="footer__social-icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__social-link footer__link">
+              <img src="<%=require('./src/images/youtube-logo.svg')%>" alt="Логотип Ютуба" class="footer__social-icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__social-link footer__link">
+              Журнал
+            </a>
+          </li>
         </ul>
       </nav>
-      <div class="footer__copyright-container">
-        <p class="footer__paragraph">
-          Информация на&nbsp;данной странице описывает возможные варианты получения дополнительного дохода в&nbsp;месяц
-          (т.н. подработка).
-          Не&nbsp;является предложением о&nbsp;работе. Размещенные объявления о&nbsp;потребности в&nbsp;тех или иных
-          услугах не&nbsp;являются вакансиями.
-        </p>
-        <p class="footer__paragraph">
-          Образовательные услуги оказываются АНО ДПО &laquo;ШАД&raquo;. Это Школа анализа данных, основанная Яндексом.
-          Оказывает услуги на&nbsp;основании Лицензии &#8470; 036031 от&nbsp;24&nbsp;марта 2015&nbsp;года.
-          Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также
-          выдается АНО ДПО &laquo;ШАД&raquo;.
-        </p>
-        <p class="footer__paragraph">
-          Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также
-          выдаётся АНО ДПО &laquo;ШАД&raquo;.
-        </p>
-        <p class="footer__paragraph">
-          &copy;&nbsp;2022&nbsp;АНО ДПО &laquo;ШАД&raquo;, ООО &laquo;Яндекс&raquo;
-        </p>
-      </div>
-    </footer>
-  </div>
+    </div>
+    <nav class="footer__menu">
+      <ul class="footer__link-container footer__list">
+        <div class="footer__link-column">
+          <li>
+            <a href="#" class="footer__menu-link footer__link">
+              Помощь
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__menu-link footer__link">
+              Для СМИ
+            </a>
+          </li>
+        </div>
+        <div class="footer__link-column">
+          <li>
+            <a href="#" class="footer__menu-link footer__link">
+              Отзывы
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__menu-link footer__link">
+              Лицензия
+            </a>
+          </li>
+        </div>
+        <div class="footer__link-column">
+          <li>
+            <a href="#" class="footer__menu-link footer__link">
+              Помощь
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__menu-link footer__link">
+              Для СМИ
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <div class="footer__copyright-container">
+      <p class="footer__paragraph">
+        Информация на&nbsp;данной странице описывает возможные варианты получения дополнительного дохода в&nbsp;месяц (т.н. подработка).
+        Не&nbsp;является предложением о&nbsp;работе. Размещенные объявления о&nbsp;потребности в&nbsp;тех или иных услугах не&nbsp;являются вакансиями.
+      </p>
+      <p class="footer__paragraph">
+        Образовательные услуги оказываются АНО ДПО &laquo;ШАД&raquo;. Это Школа анализа данных, основанная Яндексом.
+        Оказывает услуги на&nbsp;основании Лицензии &#8470; 036031 от&nbsp;24&nbsp;марта 2015&nbsp;года.
+        Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также выдается АНО ДПО &laquo;ШАД&raquo;.
+      </p>
+      <p class="footer__paragraph">
+        Документ о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования также выдаётся АНО ДПО &laquo;ШАД&raquo;.
+      </p>
+      <p class="footer__paragraph">
+        &copy;&nbsp;2022&nbsp;АНО ДПО &laquo;ШАД&raquo;, ООО &laquo;Яндекс&raquo;
+      </p>
+    </div>
+  </footer>
+</div>
 </body>
 
 </html>
