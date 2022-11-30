@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: #aaccf1;
+  background-color: #000;
   position: relative;
   overflow: hidden;
   max-height: 100vh;
@@ -14,12 +14,12 @@
 
 .header__navbar {
   margin: 0 0 142px 0;
-  padding: 0;
+  padding: 16px;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #fff;
-  padding: 16px;
   border-radius: 20px;
   z-index: 2;
 }
@@ -35,8 +35,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .header__link {
   margin: 0 12px;
@@ -47,8 +47,24 @@
   text-decoration: none;
   cursor: pointer;
 }
+.header__navBlockButton {
+  margin: 0 12px;
+  padding: 8px 12px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 1px #000;
+  border-radius: 16px;
+}
 .header__link:hover {
-  color: rgb(33, 156, 184);
+  color: #37935b;
+  transform: scale(1.05);
+}
+.header__navBlockButton:hover {
+  color: #37935b;
+  border-color: #37935b;
   transform: scale(1.05);
 }
 .header__title {
@@ -58,9 +74,10 @@
   font-weight: 500;
   font-size: 100px;
   line-height: 1;
-  color: #000;
+  color: #fff;
   pointer-events: none;
   z-index: 2;
+  max-width: 430px;
 }
 .header__subtitle {
   pointer-events: none;
@@ -68,7 +85,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.5;
-  color: #000;
+  color: #fff;
   max-width: 445px;
   z-index: 2;
 }
@@ -79,7 +96,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background-color: #242424;
+  background-color: #29cb64;
   width: 372px;
   height: 77px;
   border-radius: 38px;
@@ -87,12 +104,12 @@
   font-weight: 500;
   font-size: 21px;
   line-height: 1.2;
-  color: #fff;
+  color: #000;
   z-index: 2;
   flex-shrink: 0;
 }
 .header__button:hover {
-  background-color: #484242;
+  background-color: #37935b;
   transform: scale(1.02);
 }
 
@@ -101,7 +118,7 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background: url(../../img/headerBcgnd.png);
+  background: url(../../img/headerBgnd.png);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;

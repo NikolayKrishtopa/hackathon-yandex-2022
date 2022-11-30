@@ -1,66 +1,295 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <title></title>
 </head>
+
 <body class="root">
   <div class="page">
     <header class="header">
       <div class="header__navbar">
         <img src="<%=require('./src/img/logo.png')%>" alt="Логотип Яндекс Практикум" class="header__logo">
         <div class="header__linksBlock">
-          <a href="#" class="header__link">Программирование</a>
-          <a href="#" class="header__link">Анализ данных</a>
           <a href="#" class="header__link">Дизайн</a>
           <a href="#" class="header__link">Маркетинг</a>
           <a href="#" class="header__link">Менеджмент</a>
-          <a href="#" class="header__link">Английский</a>
+          <button class="header__navBlockButton">Оставить заявку</button>
         </div>
       </div>
-      <h1 class="header__title">Станьте<br/>экспертом</h1>
-      <p class="header__subtitle">Делитесь своим опытом и получайте<br/> дополнительный доход</p>
+      <h1 class="header__title">Станьте экспертом</h1>
+      <p class="header__subtitle">Делитесь своим опытом и получайте дополнительный доход</p>
       <a href="#" class="header__button">Хочу делиться знаниями</a>
       <div class="eraserContainer"></div>
     </header>
     <main class="content">
       <section class="resp">
-        <h2 class="resp__title">В роли наставника и<br/>ревьюера вы будете:</h2>
-          <ul class="resp__list">
-            <img src="<%=require('./src/img/man.png')%>" alt="Рисунок забавного человечка" class="resp__pic">
-            <div class="resp__gridWrapper">
-              <li class="resp__item">
-                <h3 class="resp__itemTitle">Делиться знаниями</h3>
-                <p class="resp__itemText">Менять жизнь людей к лучшему - тысячи наших студентов
-                  нуждаются в ваших знаниях и опыте - не бойтесь ими делиться</p>
-              </li>
-              <li class="resp__item">
-                <h3 class="resp__itemTitle">Преимущества</h3>
-                <p class="resp__itemText">Иметь доход в среднем от 35 до 50 тысяч Р в месяц -
-                  удаленно, 2-3 часа в день, график выбираете сами</p>
-              </li>
-              <li class="resp__item">
-                <h3 class="resp__itemTitle">Присоединитесь к экспертам</h3>
-                <p class="resp__itemText">Общаться с людьми из EdTech - станете частью сообщества
-                  экспертов и посмотрите на мир онлайн-образования изнутри</p>
-              </li>
-            </div>
-            <div class="resp__gridWrapper">
-              <li class="resp__item">
-                <h3 class="resp__itemTitle">Личный бренд</h3>
-                <p class="resp__itemText">Развивать личный бренд - публикуйте статьи в нашем блоге и
-                  выступайте на мероприятиях, чтобы как можно больше людей узнали о вас как об эксперте</p>
-              </li>
-              <li class="resp__item">
-                <h3 class="resp__itemTitle">Развитие</h3>
-                <p class="resp__itemText">Учиться новому - вы узнаете, как давать обратную связь, выступать на
-                  публике и мотивировать людей. Вы сможете стать старшим наставником или сеньор-ревьювером</p>
-              </li>
-            </div>
-          </ul>
+        <div class="resp__intro">
+          <p class="resp__introHeading">
+            Яндекс.Практикум
+          </p>
+          <p class="resp__introContent">
+
+            — сервис онлайн-образования.
+            Мы помогаем изменить свою профессиональную жизнь
+            в&nbsp;<span class="resp__introSwitch">программировании</span>
+          </p>
+        </div>
+        <h2 class="resp__title">В роли наставника и&nbsp;ревьюера вы&nbsp;будете:</h2>
+        <ul class="resp__list">
+          <!-- <img src="<%=require('./src/img/man.png')%>" alt="Рисунок забавного человечка" class="resp__pic"> -->
+          <div class="resp__gridWrapper">
+            <li class="resp__item">
+              <h3 class="resp__itemTitle">Менять жизнь к&nbsp;лучшему</h3>
+              <p class="resp__itemText">Тысячи наших студентов нуждаются в&nbsp;ваших знаниях и&nbsp;опыте -
+                не&nbsp;бойтесь ими&nbsp;делиться,</p>
+            </li>
+            <li class="resp__item">
+              <h3 class="resp__itemTitle">Учиться новому</h3>
+              <p class="resp__itemText">Вы узнаете, как&nbsp;давать обратную связь, выступать
+                на&nbsp;публике и&nbsp;мотивировать людей</p>
+            </li>
+            <li class="resp__item">
+              <h3 class="resp__itemTitle">Развиваться внутри роли</h3>
+              <p class="resp__itemText">Вы сможете стать старшим наставником или&nbsp;сеньор-ревьювером.</p>
+            </li>
+          </div>
+          <div class="resp__gridWrapper">
+            <li class="resp__item">
+              <h3 class="resp__itemTitle">Общаться с&nbsp;людьми из&nbsp;EdTech</h3>
+              <p class="resp__itemText">Вы сможете стать старшим наставником или&nbsp;сеньор-ревьювером.</p>
+            </li>
+            <li class="resp__item">
+              <h3 class="resp__itemTitle">Развивать личный бренд</h3>
+              <p class="resp__itemText">Публикуйте статьи в&nbsp;нашем блоге и&nbsp;выступайте на&nbsp;мероприятиях, чтобы как
+                можно больше людей узнали о&nbsp;вас как об&nbsp;эксперте</p>
+            </li>
+          </div>
+        </ul>
         </h2>
+      </section>
+      <section class="expert-info">
+        <div class="expert-info__steps-container">
+          <h1 class="expert-info__title">Как стать экспертом</h1>
+          <ul class="expert-info__steps-list">
+            <li class="expert-info__step">
+              <div class="expert-info__step-container">
+                <div class="expert-info__step-number">1</div>
+                <h3 class="expert-info__step-title">Выберете роль и&nbsp;заполните заявку</h3>
+              </div>
+              <img src="<%=require('./src/images/upside-down-man-illustration.svg')%>" alt="Иллюстрация с перевернутым человеком" class="expert-info__step-image expert-info__step-image_type_upside-down-man">
+            </li>
+            <li class="expert-info__step">
+              <div class="expert-info__step-container">
+                <div class="expert-info__step-number">2</div>
+                <h3 class="expert-info__step-title">Пройдите отбор и&nbsp;бесплатное обучение</h3>
+              </div>
+            </li>
+            <li class="expert-info__step">
+              <div class="expert-info__step-container">
+                <div class="expert-info__step-number">3</div>
+                <h3 class="expert-info__step-title">Можно начинать делиться знаниями</h3>
+              </div>
+              <img src="<%=require('./src/images/cross-legged-man-illustration.svg')%>" alt="Иллюстрация человека, со скрещенными ногами" class="expert-info__step-image expert-info__step-image_type_cross-legged-man">
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="mentorVSreviewer">
+        <img src="<%=require('./src/img/mentor.png')%>" alt="фото девушки с ноутбуком" class="mentorVSreviewer_picture">
+        <h2 class="mentorVSreviewer__title">Чем занимается наставник?</h2>
+        <div class="mentorVSreviewer__iconContainer">
+          <img src="<%=require('./src/img/mentorIcon.png')%>" alt="иконка наставника."
+          class="mentorVSreviewer__icon mentorVSreviewer__icon_type_mentor">
+          <img src="<%=require('./src/img/reviewerIcon.png')%>" alt="иконка ревьюера."
+            class="mentorVSreviewer__icon mentorVSreviewer__icon_type_reviewer mentorVSreviewer__icon_style_fade">
+        </div>
+        <div class="mentorVSreviewer__quoteContainer">
+          <div class="mentorVSreviewer__quote mentorVSreviewer__quote_number_1">
+            <p class="mentorVSreviewer__quoteTitle">
+              Аня Сорокина
+            </p>
+            <p class="mentorVSreviewer__quoteText">
+              Я ведущий дизайнер в Сбере и&nbsp;наставница на направлении «Дизайн»
+            </p>
+          </div>
+          <div class="mentorVSreviewer__quote mentorVSreviewer__quote_number_2">
+            <p class="mentorVSreviewer__quoteText">
+              Два раза в&nbsp;месяц веду вебинары, встречаюсь с&nbsp;коллегами, отвечаю
+              студентам на&nbsp;вопросы и&nbsp;даю фидбек по&nbsp;их проектам
+            </p>
+          </div>
+          <div class="mentorVSreviewer__quote mentorVSreviewer__quote_number_3">
+            <p class="mentorVSreviewer__quoteText">
+              В общем, делюсь опытом и&nbsp;мотивирую студентов, помогаю им ставить цели,
+              рефлексировать и&nbsp;делать выводы
+            </p>
+          </div>
+          <div class="mentorVSreviewer__quote mentorVSreviewer__quote_number_4">
+            <p class="mentorVSreviewer__quoteText mentorVSreviewer__quoteText_style_bold">
+              Я люблю свою работу и&nbsp;круто, что мне есть с&nbsp;кем этим поделиться ❤️
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="cooperation-terms">
+        <h2 class="cooperation-terms__title">Условия сотрудничества</h2>
+        <div class="cooperation-terms__cards-container">
+          <ul class="cooperation-terms__cards-list">
+            <li class="cooperation-terms__card">
+              <img src="<%=require('./src/images/black-pixel-right-arrow-icon.svg')%>" alt="Стрелка" class="cooperation-terms__pixel-icon">
+              <h3 class="cooperation-terms__card-title">От 35 до 55 тысяч ₽ в месяц</h3>
+            </li>
+            <li class="cooperation-terms__card">
+              <img src="<%=require('./src/images/black-pixel-smiling-face-icon.svg')%>" alt="Смайлик" class="cooperation-terms__pixel-icon">
+              <h3 class="cooperation-terms__card-title">В группе ≈50 человек</h3>
+            </li>
+            <li class="cooperation-terms__card">
+              <img src="<%=require('./src/images/black-pixel-tick-icon.svg')%>" alt="Галочка" class="cooperation-terms__pixel-icon">
+              <h3 class="cooperation-terms__card-title">Работай 2-3 часа в день</h3>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="cooperation-terms__button">Хочу делиться знаниями</a>
+      </section>
+      <section class="stories">
+        <div class="stories__header">
+          <h2 class="stories__title">Истории ребят из&nbsp;команды</h2>
+          <div class="galleries-nav">
+            <button class="nav__btn nav__btn_left"><img class=" nav__img_left"
+                src="<%=require('./src/img/arrow-black.svg')%>" alt=""></button>
+            <button class="nav__btn nav__btn_right"><img class=" nav__img_right"
+                src="<%=require('./src/img/arrow-black.svg')%>" alt=""></button>
+          </div>
+        </div>
+        <div class="galleries">
+          <div class="gallery">
+            <div class="gallery1 gall">
+              <div class="collomn">
+                <div class="gallery__big-fotos">
+                  <div class="big-foto articles__item">
+                    <img class="big-foto__img" src="<%=require('./src/img/girlLaptop.jpg')%>" alt="вид с балкона">
+                  </div>
+                </div>
+                <div class="article articles__item">
+                  <h3 class="articles__title">«Все моё наставничество — это челендж»</h3>
+                  <div class="dsen__link">
+                    <p class="dsen__link-title">Настя, дизайнер в&nbsp;Space307 и&nbsp;наставница на&nbsp;веб-факультете </p>
+                    <a class="dsen__link-btn"
+                      href="https://dzen.ru/media/praktikum/vse-moe-nastavnichestvo--eto-chellendj-5f28104fd4974c5f0fbf1c57"
+                      target="_blank"><img src="<%=require('./src/img/arrow-black.svg')%>" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <div class="collomn">
+                <div class="storie articles__item">
+                  <div class="storie-portfolio">
+                    <img class="storie-portfolio__img" src="<%=require('./src/img/zoya.jpg')%>" alt="фотография зои">
+                    <div class="storie-portfolio__info">
+                      <div class="storie-portfolio__info-title zoya">Артем Евсяков</div>
+                      <div class="storie-portfolio__info-subtitle">Старший код-ревьюер <br />веб-факультета</div>
+                    </div>
+                  </div>
+                  <div class="storie__text">Работал код-ревьюера с гибким графиком, благодаря ей я получаю
+                    дополнительный
+                    доход и могу делиться своим опытом. Ведь при написаниикода важно не только большое количество
+                    практики,
+                    но
+                    и поддержка коллег.</div>
+                </div>
+                <div class="gallery__fotos">
+                  <div class="gallery__foto">
+                    <div class="high-foto1 articles__item">
+                      <img class="high-foto__img" src="<%=require('./src/img/girlСouch.jpg')%>" alt="вид с балкона">
+                    </div>
+                  </div>
+                  <div class="gallery__foto">
+                    <div class="high-foto2 articles__item">
+                      <img class="high-foto__img" src="<%=require('./src/img/guyStreet.jpg')%>" alt="вид с балкона">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="container video-container">
+              <div class=" video">
+                <img class="video__img" src="<%=require('./src/img/damir.jpg')%>"
+                  alt="Дамир был работником. Стал разработчиком">
+                <div class="video__info">
+                  <div class="video__title">Дамир был работником.<br /> Стал разработчиком</div>
+                  <a href='https://practicum.yandex.ru/career-center/stories/#damir-story'
+                    class="video__button popup-link" target="_blank">Смотреть видеоисторию</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="gallery ">
+            <div class="gallery2 gall">
+              <div class="collomn">
+                <div class="article articles__item">
+                  <h3 class="articles__title">«Уже хорошо разбираюсь в IT, как поделиться знаниями с новичками?»
+                    Способ для мидлов и старше</h3>
+                  <div class="dsen__link">
+                    <p class="dsen__link-title">Статья, </p>
+                    <a class="dsen__link-btn" href="https://tproger.ru/articles/sharing-knowledge/" target="_blank"><img
+                        src="<%=require('./src/img/arrow-black.svg')%>" alt=""></a>
+                  </div>
+                </div>
+                <div class="gallery__fotos">
+                  <div class="gallery__foto">
+                    <div class="high-foto1 articles__item">
+                      <img class="high-foto__img" src="<%=require('./src/img/girlInTheSweater.jpg')%>"
+                        alt="вид с балкона">
+                    </div>
+                  </div>
+                  <div class="gallery__foto">
+                    <div class="high-foto2 articles__item">
+                      <img class="high-foto__img" src="<%=require('./src/img/viewFromTheBalcony.jpg')%>"
+                        alt="вид с балкона">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collomn">
+                <div class="gallery__big-fotos">
+                  <div class="big-foto articles__item">
+                    <img class="big-foto__img" src="<%=require('./src/img/theWomanInGreen.jpg')%>" alt="вид с балкона">
+                  </div>
+                </div>
+                <div class="storie articles__item">
+                  <div class="storie-portfolio">
+                    <img class="storie-portfolio__img" src="<%=require('./src/img/zoya.jpg')%>" alt="фотография зои">
+                    <div class="storie-portfolio__info">
+                      <div class="storie-portfolio__info-title zoya">Зоя Король</div>
+                      <div class="storie-portfolio__info-subtitle">Наставник курса «Инженер по тестированию»</div>
+                    </div>
+                  </div>
+                  <div class="storie__text">Мне безумно нравится делиться знаниями, а еще больше рудуюсь, когда
+                    студенты находят
+                    работу и успешно проходят испытательный срок.</div>
+                </div>
+              </div>
+            </div>
+            <div class="container video-container">
+              <div class=" video">
+                <img class="video__img" src="<%=require('./src/img/olga.jpg')%>"
+                  alt="Дамир был работником. Стал разработчиком">
+                <div class="video__info">
+                  <div class="video__title">Ольга выступала на встречах. <br />А теперь выступает на конференциях.
+                  </div>
+                  <a href='https://practicum.yandex.ru/career-center/stories/#olga-story' target="blink"
+                    class="video__button popup-link" target="_blank">Смотреть видеоисторию</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
       </section>
       <section class="apply">
         <h2 class="apply__title">Не нашли себя в открытых предложениях?</h2>
@@ -68,8 +297,9 @@
         <img src="<%=require('./src/images/group-of-figures.png')%>" alt="Группа фигур" class="apply__image">
         <a href="#" class="apply__button">Хочу делиться знаниями</a>
       </section>
-    </main>
-    <footer class="footer">
-    </footer>
- </body>
+  </div>
+  </main>
+  <footer class="footer">
+  </footer>
+</body>
 </html>

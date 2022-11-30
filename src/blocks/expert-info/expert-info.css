@@ -1,0 +1,142 @@
+.expert-info {
+  margin: 0;
+  padding: 80px 112px 80px;
+  width: 100%;
+  min-height: 1000px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 80px;
+  color: #000000;
+  font-style: normal;
+}
+
+.expert-info__steps-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.expert-info__title {
+  margin: 0;
+  margin-bottom: 82px;
+  padding: 0;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.expert-info__steps-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.expert-info__step {
+  margin: 0;
+  margin-bottom: 70px;
+  padding: 0;
+  width: 100%;
+  min-height: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expert-info__step:nth-of-type(1) {
+  justify-content: start;
+}
+
+.expert-info__step:nth-of-type(2) {
+  justify-content: end;
+  margin-bottom: 100px;
+}
+
+.expert-info__step:nth-of-type(3) {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.expert-info__step-container {
+  margin: 0;
+  padding: 0;
+  max-width: 646px;
+  min-height: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expert-info__step-number {
+  margin: 0;
+  margin-right: 24px;
+  padding: 0;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.expert-info__step-title {
+  margin: 0;
+  padding: 0;
+  max-width: 494px;
+  min-height: 108px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+}
+
+.expert-info__step-image {
+  margin: 0;
+  margin-left: 80px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.expert-info__step-image_type_upside-down-man {
+  max-width: 225px;
+  max-height: 242px;
+}
+
+.expert-info__step-image_type_cross-legged-man {
+  max-width: 152px;
+  max-height: 232px;
+}
+
+@media (max-width: 1000px) {
+  .expert-info__title {
+    font-size: 50px;
+  }
+
+  .expert-info__step {
+    flex-wrap: wrap;
+  }
+
+  .expert-info__step-title {
+    max-width: 494px;
+    min-width: 200px;
+    font-size: 32px;
+  }
+
+  .expert-info__step-image {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
