@@ -68,31 +68,23 @@ const slidesCount = galleries.querySelectorAll(".gall").length;
 let activeSliderIndex = 0;
 
 leftBtn.addEventListener("click", () => {
-  console.log("left");
   changeSlide("left");
 });
 
 //слушатель на кнопку вправо
 rightBtn.addEventListener("click", () => {
-  console.log("right");
   changeSlide("right");
 });
 
-// function nextSlide() {
-//   galleries[currentSlide].className = "gallery";
-//   currentSlide = (currentSlide + 1) % galleries.length;
-//   galleries[currentSlide].className = "gallery showing";
-// }
-
 function changeSlide(direction) {
   if (direction === "right") {
-    activeSliderIndex++;
+    activeSliderIndex >= 1 ? false : activeSliderIndex++;
     console.log(activeSliderIndex);
     if (activeSliderIndex === slidesCount) {
       activeSliderIndex = 0;
     }
   } else if (direction === "left") {
-    activeSliderIndex--;
+    activeSliderIndex <= 0 ? false : activeSliderIndex--;
     console.log(activeSliderIndex);
     if (activeSliderIndex < 0) {
       activeSliderIndex = slidesCount - 1;
