@@ -1,5 +1,5 @@
-import mentorPic from "../../img/mentor.png";
-import reviewerPic from "../../img/reviewer.png";
+import mentorPic from "../img/mentor.png";
+import reviewerPic from "../img/reviewer.png";
 
 const modes = {
   MENTOR: "MENTOR",

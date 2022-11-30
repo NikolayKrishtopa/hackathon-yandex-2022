@@ -17,7 +17,7 @@ const config = {
     compress: true,
     hot: true,
     watchFiles: ["*.html"],
-    open: true
+    open: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -38,9 +38,13 @@ const config = {
         test: /\.css$/i,
         use: [stylesHandler, "css-loader", "postcss-loader"],
       },
+      // {
+      //   test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+      //   type: "asset",
+      // },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
+        type: "asset/resource",
       },
     ],
   },

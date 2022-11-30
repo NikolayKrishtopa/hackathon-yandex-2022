@@ -94,6 +94,12 @@
 .resp__introSwitch {
   color: #37935b;
 }
+
+.resp__introCursor {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+}
 @media (max-width: 1200px) {
   .resp__title {
     font-size: 60px;

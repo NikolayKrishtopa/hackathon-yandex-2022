@@ -1,6 +1,6 @@
 import "./index.css";
 import scrollSelectors from "../utils/config";
-import MentorReviewer from "../blocks/components/MentorReviewer";
+import MentorReviewer from "../components/MentorReviewer";
 
 // ***Реализация эффекта ластика в хедере***
 // Вариант черновой, отрефакторить на Canvas
