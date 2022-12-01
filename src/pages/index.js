@@ -2,14 +2,10 @@ import "./index.css";
 import scrollSelectors from "../utils/config";
 import MentorReviewer from "../components/MentorReviewer.js";
 import Vacancies from "../components/Vacancies";
-import { gsap } from "gsap";
 import minusIcon from "../img/minusIcon.png";
 import plusIcon from "../img/plusIcon.png";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
+import Popup from "../components/Popup";
 
 // Кнопка бургерного меню
 
@@ -19,8 +15,6 @@ burgerButton.addEventListener("click", () => {
   headerMenu.classList.contains("header__linksBlock_active")
     ? headerMenu.classList.remove("header__linksBlock_active")
     : headerMenu.classList.add("header__linksBlock_active");
-
-  console.log(headerMenu.classList);
 });
 
 // ***Реализация эффекта ластика в хедере***
@@ -73,7 +67,7 @@ const vacancies = new Vacancies();
 vacancies.initialize();
 
 //***Реализация смены значений в секции "В роли наставника вы будете..."***
-const spanToSwitch = document.querySelector(".resp__introSwitch");
+const spanToSwitch = document.querySelector(".intro__switch");
 const spanValues = [
   "программировании",
   "дизайне",
@@ -81,13 +75,12 @@ const spanValues = [
   "маркетинге",
   "менеджменте",
 ];
-const getRandomValue = () => {
+console.log(spanToSwitch);
+const setRandomValue = () => {
   const randomIndex = Math.floor(Math.random() * spanValues.length);
-  return spanValues[randomIndex];
+  spanToSwitch.textContent = spanValues[randomIndex];
 };
-// setInterval(() => {
-//   spanToSwitch.textContent = getRandomValue();
-// }, 2000);
+setInterval(setRandomValue, 2000);
 
 // ***Реализация появления сообщений при скролле
 
@@ -335,6 +328,7 @@ const buttonThirdCard = document
 const cardResalt = document.querySelector(".quiz__card-result");
 const buttonCardResalt = document.querySelector(".card__button-end");
 const buttonRepeat = document.querySelector(".card-result__buttons-repeat");
+const buttonMoreVacancy = document.querySelector(".card-result__buttons-more");
 
 // для будущей логики
 let arr1 = [];
@@ -407,12 +401,43 @@ function Repeat() {
   });
 }
 
+// кнопка на вакансии
+function SendingVacancy() {
+  buttonMoreVacancy.addEventListener("click", () => {
+    vacancies.setProgramming();
+    vacancies.setMentor();
+  });
+}
+
 ArrayFirstCard();
 ArraySecondCard();
 ArrayThidrCard();
 Repeat();
+SendingVacancy();
 // console.log("programming", programming);
 
 // функция открытия второй карточки
 
 // ========== конец блока quiz ============
+
+// ***Реализация логики попапов***
+
+// Кнопки открытия попапа application-popup
+const applicationButtonElement = document.querySelector(".apply__button");
+const headerButtonElement = document.querySelector(".header__navBlockButton");
+
+const applicationPopup = new Popup(
+  '.popup_type_application'
+);
+
+// Функция-обработчик клика по кнопке applicationButtonElement
+const handleApplicationButtonClick = () => {
+  applicationPopup.open();
+};
+
+// Установка слушателя клика по кнопкам открытия попапа
+applicationButtonElement.addEventListener('click', handleApplicationButtonClick);
+headerButtonElement.addEventListener('click', handleApplicationButtonClick);
+
+// Установка слушателей событий попапу
+applicationPopup.setEventListeners();

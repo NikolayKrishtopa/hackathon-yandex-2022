@@ -53,11 +53,11 @@
   color: #fff;
   flex-shrink: 0;
   z-index: 1;
+  transition: all 0.3s linear;
 }
 
-.header__button:hover {
-  background-color: #484242;
-  transform: scale(1.02);
+.apply__button:hover {
+  opacity: 0.8;
 }
 
 .apply__image {
@@ -75,6 +75,7 @@
 @media (max-width: 1000px) {
   .apply {
     min-height: 350px;
+    padding: 60px;
   }
 
   .apply__title {
@@ -91,8 +92,42 @@
   }
 
   .apply__image {
-    margin-top: 50px;
-    width: 400px;
+    margin: 0 auto 12px 0;
+    height: 270px;
+    width: auto;
     position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .apply {
+    padding: 40px;
+    border-radius: 24px;
+  }
+
+  .apply__image {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apply {
+    padding: 24px 12px;
+    border-radius: 24px;
+  }
+
+  .apply__title {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+
+  .apply__subtitle {
+    font-size: 16px;
+  }
+
+  .apply__button {
+    margin-top: 14px;
+    max-width: 288px;
+    min-height: 50px;
   }
 }
