@@ -1,10 +1,27 @@
 import "./index.css";
 import scrollSelectors from "../utils/config";
 import MentorReviewer from "../components/MentorReviewer.js";
-import { gsap, ScrollTrigger } from "gsap/all";
+import Vacancies from "../components/Vacancies";
+import { gsap } from "gsap";
+import minusIcon from "../img/minusIcon.png";
+import plusIcon from "../img/plusIcon.png";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-console.log(ScrollTrigger);
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Кнопка бургерного меню
+
+const burgerButton = document.querySelector(".header__burgerButton");
+const headerMenu = document.querySelector(".header__linksBlock");
+burgerButton.addEventListener("click", () => {
+  headerMenu.classList.contains("header__linksBlock_active")
+    ? headerMenu.classList.remove("header__linksBlock_active")
+    : headerMenu.classList.add("header__linksBlock_active");
+
+  console.log(headerMenu.classList);
+});
 
 // ***Реализация эффекта ластика в хедере***
 // Вариант черновой, отрефакторить на Canvas
@@ -31,6 +48,48 @@ header.addEventListener("mousemove", (e) => {
 //   eraserContainer.appendChild(eraser);
 // });
 
+//Vacancies
+
+const extendPositionButtons = document.querySelectorAll(
+  ".vacancies__posExtendButton"
+);
+
+extendPositionButtons.forEach((e) => {
+  e.addEventListener("click", () => {
+    const spoiler = e
+      .closest(".vacancies__position")
+      .querySelector(".vacancies__spoiler");
+    if (spoiler.classList.contains("vacancies__spoiler_shown")) {
+      spoiler.classList.remove("vacancies__spoiler_shown");
+      e.querySelector(".vacancies__posExtendIcon").src = plusIcon;
+    } else {
+      spoiler.classList.add("vacancies__spoiler_shown");
+      e.querySelector(".vacancies__posExtendIcon").src = minusIcon;
+    }
+  });
+});
+
+// const vacancies = new Vacancies('хуй');
+// vacancies.initialize();
+// let vacRole = "";
+// let vacType = "";
+
+// function renderFacultButtons(buttonList, id) {
+//   return buttonList.forEach((e) => {
+//     e.id === id
+//       ? e.classList.add("vacancies__facultyButton_active")
+//       : e.classList.remove("vacancies__facultyButton_active");
+//   });
+// }
+
+// const facultButtons = document.querySelectorAll(".vacancies__facultyButton");
+
+// facultButtons.forEach((e, i, arr) => {
+//   e.addEventListener("click", () => {
+//     renderFacultButtons(arr, e.id);
+//   });
+// });
+
 //***Реализация смены значений в секции "В роли наставника вы будете..."***
 const spanToSwitch = document.querySelector(".resp__introSwitch");
 const spanValues = [
@@ -45,9 +104,7 @@ const getRandomValue = () => {
   return spanValues[randomIndex];
 };
 setInterval(() => {
-  spanToSwitch.classList.add("resp__introSwitch_transitionMode");
   spanToSwitch.textContent = getRandomValue();
-  spanToSwitch.classList.remove("resp__introSwitch_transitionMode");
 }, 2000);
 
 // ***Реализация появления сообщений при скролле
@@ -60,7 +117,7 @@ const quote4 = document.querySelector(".mentorVSreviewer__quote_number_4");
 // gsap.from(".mentorVSreviewer__quote_number_1", {
 //   ScrollTrigger: {
 //     trigger: ".mentorVSreviewer__quote_number_1",
-//     toggleActions: "restart none none none",
+//     toggleActions: "play none none none",
 //   },
 //   x: 1000,
 //   duration: 3,

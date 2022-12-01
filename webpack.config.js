@@ -16,7 +16,7 @@ const config = {
   devServer: {
     compress: true,
     hot: true,
-    watchFiles: ["*.html"],
+    watchFiles: ["*.html", "*.scc", "*.js"],
     open: true,
   },
   plugins: [
