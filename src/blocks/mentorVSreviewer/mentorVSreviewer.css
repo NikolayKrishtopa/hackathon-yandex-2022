@@ -43,13 +43,12 @@
   gap: 8px;
   position: absolute;
   right: 112px;
-  bottom: 56px;
+  bottom: 156px;
   align-items: flex-end;
 }
 .mentorVSreviewer__quoteContainer_type_left {
   right: unset;
   left: 112px;
-  bottom: 128px;
   align-items: flex-start;
 }
 .mentorVSreviewer__quote {
