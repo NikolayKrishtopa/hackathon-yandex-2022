@@ -1,0 +1,303 @@
+.vacancies {
+  margin: 0;
+  padding: 0 112px 132px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  position: relative;
+}
+.vacancies__rocket {
+  margin: 0;
+  padding: 0;
+  max-width: 270px;
+  position: absolute;
+  right: 100px;
+  top: 0;
+}
+.vacancies__title {
+  margin: 0;
+  padding: 0;
+  max-width: 940px;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+.vacancies__container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 140px;
+}
+.vacancies__navbar {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.vacancies__navBlock {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.vacancies__navTitle {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.vacancies__rolesButtonBlock {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 262px;
+  align-items: center;
+  height: 52px;
+  border-radius: 26px;
+  background-color: #eaeaea;
+  border: 2px solid #858585;
+  box-sizing: border-box;
+  flex-shrink: 1;
+}
+.vacancies__roleButton {
+  margin: 0;
+  padding: 12px 20px;
+  height: 52px;
+  border-radius: 26px;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.vacancies__roleButton_active {
+  border-radius: 26px;
+  /* border: 2px solid #000; */
+  background-color: #000;
+  color: #fff;
+}
+.vacancies__facultyButtonBlock {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+.vacancies__positions {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.vacancies__facultyButton {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  color: #858585;
+  border: none;
+  cursor: pointer;
+}
+.vacancies__facultyButton_active {
+  color: #000;
+}
+.positions__container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 700px;
+}
+.vacancies__position {
+  margin: 0;
+  padding: 24px 0;
+  display: none;
+  flex-direction: column;
+  border-bottom: 1px solid #858585;
+  position: relative;
+}
+.vacancies__position_type_noVac {
+  border: none;
+}
+.vacancies__position_shown {
+  display: flex;
+}
+.vacancies__positionTitle {
+  margin: 0;
+  padding: 0;
+  max-width: 488px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  color: #000;
+}
+.vacancies__descrContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  max-width: 488px;
+  gap: 20px;
+}
+.vacancies__posDescrItem {
+  margin: 8px 0 0 0;
+  padding: 0;
+  font-size: 16px;
+  color: #858585;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.vacancies__posExtendButton {
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  cursor: pointer;
+  size: 26px;
+  top: 24px;
+  right: 42px;
+  border: none;
+  cursor: pointer;
+}
+
+.vacancies__spoiler {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  display: none;
+  position: relative;
+}
+.vacancies__spoiler_shown {
+  display: flex;
+}
+.vacancies__spoilerText {
+  margin: 0;
+  padding: 20px 0;
+  max-width: 80%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.vacancies__spoilerButtons {
+  margin: 0;
+  padding: 0 42px 0 0;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.vacancies__responseButton {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 315px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  cursor: pointer;
+}
+.vacancies__responseButton_type_noVac {
+  margin-top: 20px;
+}
+.vacancies__detailsButton {
+  margin: 0 9px 0 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  border: none;
+  cursor: pointer;
+}
+.vacancies__shareButton {
+  margin: 0;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .vacancies__container {
+    gap: 60px;
+  }
+  .vacancies__rocket {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .vacancies__container {
+    gap: 40px;
+  }
+  .vacancies {
+    gap: 32px;
+    padding: 0 60px 132px;
+  }
+  @media (max-width: 900px) {
+    /* .vacancies__container {
+      grid-template-columns: 1fr;
+    } */
+    .vacancies__roleButton,
+    .vacancies__positionTitle,
+    .vacancies__facultyButton,
+    .vacancies__spoilerText {
+      font-size: 16px;
+      line-height: 22.4px;
+    }
+
+    .vacancies__posDescrItem {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 800px) {
+    .vacancies__container {
+      grid-template-columns: 1fr;
+    }
+    .vacancies__title {
+      font-size: 30px;
+      line-height: 1.2;
+      max-width: 274px;
+    }
+    .vacancies__spoilerButtons {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .vacancies__shareButton {
+      position: absolute;
+      right: 0;
+      top: 0;
+      right: 30px;
+      top: -30px;
+    }
+    .vacancies__responseButton_type_noVac {
+      margin-top: 24px;
+      width: 280px;
+      height: 50px;
+      border-radius: 25px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .vacancies {
+    padding: 0px 8px;
+  }
+  .vacancies__posExtendButton {
+    right: 17px;
+  }
+  .vacancies__positionTitle,
+  .vacancies__descrContainer {
+    max-width: 273px;
+  }
+}

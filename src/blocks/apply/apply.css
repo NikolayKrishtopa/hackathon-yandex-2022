@@ -1,0 +1,133 @@
+.apply {
+  margin: 0;
+  padding: 80px 112px;
+  width: 100%;
+  min-height: 456px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 80px;
+  box-sizing: border-box;
+  font-weight: 500;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.apply__title {
+  margin: 0;
+  margin-bottom: 20px;
+  max-width: 650px;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  z-index: 1;
+}
+
+.apply__subtitle {
+  margin: 0;
+  max-width: 450px;
+  font-size: 24px;
+  line-height: 1.33;
+  z-index: 1;
+}
+
+.apply__button {
+  margin: 0;
+  margin-top: 56px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #000;
+  width: 315px;
+  height: 60px;
+  border-radius: 120px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #fff;
+  flex-shrink: 0;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.apply__button:hover {
+  opacity: 0.8;
+}
+
+.apply__image {
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+  width: 40%;
+  height: auto;
+  position: absolute;
+  right: 6%;
+  bottom: 40px;
+  z-index: 0;
+}
+
+@media (max-width: 1000px) {
+  .apply {
+    min-height: 350px;
+    padding: 60px;
+  }
+
+  .apply__title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .apply__subtitle {
+    font-size: 16px;
+  }
+
+  .apply__button {
+    font-size: 16px;
+  }
+
+  .apply__image {
+    margin: 0 auto 12px 0;
+    height: 270px;
+    width: auto;
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .apply {
+    padding: 40px;
+    border-radius: 24px;
+  }
+
+  .apply__image {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apply {
+    padding: 24px 12px;
+    border-radius: 24px;
+  }
+
+  .apply__title {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+
+  .apply__subtitle {
+    font-size: 16px;
+  }
+
+  .apply__button {
+    margin-top: 14px;
+    max-width: 288px;
+    min-height: 50px;
+  }
+}

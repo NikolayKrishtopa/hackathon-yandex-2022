@@ -1,6 +1,361 @@
 .footer {
   margin: 0;
+  padding: 80px 112px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 60px;
+  width: 100%;
+  min-height: 540px;
+  background: #000;
+  border-radius: 80px 80px 0px 0px;
+  color: #fff;
+}
+
+.footer__link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  transition: opacity 0.2s linear;
+}
+
+.footer__link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.footer__list {
+  margin: 0 auto;
   padding: 0;
+  list-style-type: none;
+}
+
+.footer__left-column {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer__logo {
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 20px;
+  min-width: 257px;
+  height: 42px;
+}
+
+.footer__phone-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.footer__phone {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.footer__phone-subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.footer__social-container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.footer__social-link {
+  display: block;
+  margin-right: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.footer__social-icon {
+  object-fit: contain;
+  object-position: center;
+  min-width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+
+.footer__telegram-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__telegram-text {
+  max-width: 308px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 0 0 32px 0;
+}
+
+.footer__telegram-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  width: 221px;
+  min-height: 36px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  flex-shrink: 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  vertical-align: middle
+}
+
+.footer__telegram-icon {
+  object-fit: contain;
+  object-position: center;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.footer__link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: space-between;
+  min-height: 64px;
+  margin: 0;
+}
+
+.footer__link-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  margin-right: 88px;
+  margin-bottom: 56px;
+}
+
+.footer__link-column:last-of-type {
+  margin-right: 0;
+}
+
+.footer__menu-title {
+  margin: 0 auto 14px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #858585;
+}
+
+.footer__menu-list-item {
+  margin: 0 auto 9px 0;
+}
+
+.footer__menu-list-item:last-child {
+  margin: 0 auto 0 0;
+}
+
+.footer__menu-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.footer__menu-link:last-of-type {
+  margin-bottom: 0;
+}
+
+.footer__paragraph {
+  margin: 0 auto 15px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #858585;
+}
+
+.footer__paragraph:last-of-type {
+  margin: 0 auto 0 0;
+}
+
+.footer__text-copyright-link {
+  text-decoration: underline;
+  color: #858585;
+}
+
+@media (max-width: 1400px) {
+  .footer__link-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    grid-template-columns: 1fr;
+    border-radius: 40px 40px 0px 0px;
+    column-gap: 0;
+    padding: 40px 60px 80px;
+  }
+
+  .footer__left-column {
+    margin-bottom: 56px;
+  }
+
+  .footer__telegram-text {
+    margin-top: 42px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer__link-container {
+    justify-content: start;
+  }
+
+  .footer__link-column {
+    margin-right: 46px;
+    margin-bottom: 40px;
+  }
+
+  .footer__link-column:last-of-type {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    padding: 36px 60px 80px;
+  }
+
+  .footer__link-column {
+    margin-right: 40px;
+    margin-bottom: 34px;
+  }
+
+  .footer__link-column:last-of-type {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 32px 40px 72px;
+  }
+
+  .footer__link-column {
+    max-width: 176px;
+    margin-right: 24px;
+    margin-bottom: 30px;
+  }
+
+  .footer__link-column:nth-of-type(2) {
+    margin-right: 0;
+  }
+
+  .footer__link-column:last-of-type {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+
+  .footer__menu-link {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px 8px 72px;
+    border-radius: 24px 24px 0px 0px;
+  }
+
+  .footer__logo {
+    margin-bottom: 18px;
+    min-width: 203px;
+    height: 33px;
+  }
+
+  .footer__phone {
+    font-size: 30px;
+  }
+
+  .footer__phone-subtitle {
+    font-size: 14px;
+  }
+
+  .footer__telegram-text {
+    max-width: 281px;
+    font-size: 16px;
+    margin-top: 34px;
+    margin-bottom: 26px;
+  }
+
+  .footer__telegram-button {
+    padding: 8px 16px;
+    width: 190px;
+    min-height: 36px;
+    font-size: 16px;
+  }
+
+  .footer__telegram-icon {
+    margin-right: 4px;
+    font-size: 14px;
+  }
+
+  .footer__link-column {
+    max-width: 176px;
+    margin-right: 24px;
+    margin-bottom: 30px;
+  }
+
+  .footer__link-column:nth-of-type(2) {
+    margin-right: 0;
+  }
+
+  .footer__link-column:last-of-type {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+
+  .footer__menu-title {
+    margin: 0 auto 10px 0;
+    font-size: 14px;
+  }
+
+  .footer__menu-list-item {
+    margin: 0 auto 6px 0;
+  }
+
+  .footer__menu-list-item:last-child {
+    margin: 0 auto 0 0;
+  }
+
+  .footer__menu-link {
+    font-size: 14px;
+  }
+
+  .footer__paragraph {
+    margin: 0 auto 13px 0;
+    font-size: 14px;
+  }
+
+  .footer__paragraph:last-of-type {
+    margin: 0 auto 0 0;
+  }
 }

@@ -1,15 +1,13 @@
 .expert-info {
   margin: 0;
-  padding: 80px 112px 80px;
+  padding: 80px 112px;
   width: 100%;
-  min-height: 1000px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: #FFFFFF;
-  border-radius: 80px;
+  background-color: #F5F5F5;
   color: #000000;
   font-style: normal;
 }
@@ -32,46 +30,42 @@
   letter-spacing: -0.02em;
 }
 
+.expert-info__step-image-container {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  border-radius: 32px;
+}
+
 .expert-info__steps-list {
   margin: 0;
-  padding: 0;
-  width: 100%;
+  padding: 56px 24px;
+  width: 70%;
   list-style-type: none;
 }
 
 .expert-info__step {
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 48px;
   padding: 0;
   width: 100%;
-  min-height: 108px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 50px;
 }
 
-.expert-info__step:nth-of-type(1) {
-  justify-content: start;
-}
-
-.expert-info__step:nth-of-type(2) {
-  justify-content: end;
-  margin-bottom: 100px;
-}
-
-.expert-info__step:nth-of-type(3) {
-  justify-content: center;
+.expert-info__step:last-of-type {
   margin-bottom: 0;
 }
 
 .expert-info__step-container {
   margin: 0;
   padding: 0;
-  max-width: 646px;
-  min-height: 108px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 50px;
 }
 
 .expert-info__step-number {
@@ -94,49 +88,149 @@
 .expert-info__step-title {
   margin: 0;
   padding: 0;
-  max-width: 494px;
-  min-height: 108px;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.2;
   display: flex;
   align-items: center;
+  min-height: 50px;
 }
 
-.expert-info__step-image {
-  margin: 0;
-  margin-left: 80px;
-  object-fit: contain;
+.expert-info__image {
+  object-fit: cover;
   object-position: center;
+  width: 35%;
+  min-height: 100%;
+  background-color: #37935B;
+  border-radius: 0 32px 32px 0;
 }
 
-.expert-info__step-image_type_upside-down-man {
-  max-width: 225px;
-  max-height: 242px;
-}
-
-.expert-info__step-image_type_cross-legged-man {
-  max-width: 152px;
-  max-height: 232px;
+@media (max-width: 1200px) {
+  .expert-info__step-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 1000px) {
+  .expert-info {
+    padding: 80px 60px;
+  }
+
+  .expert-info__step-image-container {
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .expert-info__steps-list {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .expert-info__image {
+    width: 100%;
+    max-height: 267px;
+    border-radius: 0 0 24px 24px;
+  }
+
   .expert-info__title {
+    margin-bottom: 40px;
     font-size: 50px;
   }
 
   .expert-info__step {
-    flex-wrap: wrap;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .expert-info__step-container {
+    width: 100%;
+    justify-content: start;
+  }
+
+  .expert-info__step:last-of-type {
+    margin-bottom: 0;
   }
 
   .expert-info__step-title {
-    max-width: 494px;
-    min-width: 200px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .expert-info {
+    padding: 80px 40px;
+  }
+
+  .expert-info__step-image-container {
+    flex-direction: column;
+  }
+
+  .expert-info__steps-list {
+    padding: 28px 12px;
+  }
+
+  .expert-info__title {
+    margin-bottom: 20px;
     font-size: 32px;
   }
 
-  .expert-info__step-image {
-    margin: 0 auto;
-    margin-top: 40px;
+  .expert-info__step {
+    margin-bottom: 30px;
+  }
+
+  .expert-info__step:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .expert-info__step-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expert-info {
+    padding: 68px 8px;
+  }
+
+  .expert-info__steps-list {
+    padding: 16px 12px;
+  }
+
+  .expert-info__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .expert-info__step {
+    margin-bottom: 20px;
+  }
+
+  .expert-info__step:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .expert-info__step-number {
+    margin-right: 16px;
+  }
+
+  .expert-info__step-title {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .expert-info__step-number {
+    margin-right: 12px;
+    min-width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .expert-info__step-title {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
