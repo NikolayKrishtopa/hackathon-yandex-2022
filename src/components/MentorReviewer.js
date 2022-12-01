@@ -1,6 +1,5 @@
 import mentorPic from "../img/mentor.png";
 import reviewerPic from "../img/reviewer.png";
-import { gsap } from "gsap";
 
 const modes = {
   MENTOR: "MENTOR",

@@ -2,10 +2,8 @@ import "./index.css";
 import scrollSelectors from "../utils/config";
 import MentorReviewer from "../components/MentorReviewer.js";
 import Vacancies from "../components/Vacancies";
-import { gsap } from "gsap";
 import minusIcon from "../img/minusIcon.png";
 import plusIcon from "../img/plusIcon.png";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 

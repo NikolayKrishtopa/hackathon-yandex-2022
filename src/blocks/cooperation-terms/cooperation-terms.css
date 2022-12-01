@@ -130,6 +130,12 @@
     font-size: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .cooperation-terms {
+    padding: 68px 8px;
+  }
+
   .cooperation-terms__title {
     margin: 0 auto 25px 0;
     font-size: 25px;
@@ -143,10 +149,7 @@
     padding: 12px 16px;
   }
 }
-@media (max-width: 480px) {
-  .cooperation-terms {
-    padding: 68px 8px;
-  }
+
 @media (max-width: 400px) {
   .cooperation-terms__pixel-icon {
     margin-right: 12px;
@@ -154,5 +157,3 @@
     height: 40px;
   }
 }
-
-
