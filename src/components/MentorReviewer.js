@@ -1,5 +1,6 @@
 import mentorPic from "../img/mentor.png";
 import reviewerPic from "../img/reviewer.png";
+import { gsap } from "gsap";
 
 const modes = {
   MENTOR: "MENTOR",
@@ -88,9 +89,6 @@ export default class MentorReviewer {
     });
     this._mentorIcon.addEventListener("click", () => {
       this._setMentor();
-    });
-    this._picture.addEventListener("click", () => {
-      this._toggleMode();
     });
   };
 

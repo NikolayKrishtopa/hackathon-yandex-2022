@@ -4,10 +4,7 @@ import MentorReviewer from "../components/MentorReviewer.js";
 import Vacancies from "../components/Vacancies";
 import minusIcon from "../img/minusIcon.png";
 import plusIcon from "../img/plusIcon.png";
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
 
 // Кнопка бургерного меню
 
@@ -17,8 +14,6 @@ burgerButton.addEventListener("click", () => {
   headerMenu.classList.contains("header__linksBlock_active")
     ? headerMenu.classList.remove("header__linksBlock_active")
     : headerMenu.classList.add("header__linksBlock_active");
-
-  console.log(headerMenu.classList);
 });
 
 // ***Реализация эффекта ластика в хедере***

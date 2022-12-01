@@ -154,13 +154,13 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 28px;
-    display: none;
+    display: none !important;
   }
   .header__navBlockButton {
     display: none;
   }
   .header__linksBlock_active {
-    display: flex;
+    display: flex !important;
   }
 }
 @media (max-width: 1000px) {

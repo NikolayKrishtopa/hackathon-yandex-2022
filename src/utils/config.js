@@ -1,5 +1,5 @@
 const scrollSelectors = {
-  section: "mentorVSreviewer",
+  section: ".mentorVSreviewer",
   title: ".mentorVSreviewer__title",
   personNameSelector: ".mentorVSreviewer__quoteTitle",
   picture: ".mentorVSreviewer_picture",
