@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   color: #000000;
   font-weight: 500;
   font-style: normal;
@@ -45,7 +45,7 @@
   padding: 20px 24px;
   width: 100%;
   min-height: 64px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -173,7 +173,6 @@
     font-size: 16px;
   }
 }
-
 
 @media (max-width: 1000px) {
   .expert-info {
