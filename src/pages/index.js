@@ -245,7 +245,7 @@ let _slideDown = (target, duration = 500) => {
     target.style.transitionDuration = duration + "ms";
     target.style.height = height + "px";
     target.style.removeProperty("padding-top");
-    target.style.removeProperty("padding-bottom");
+    // target.style.removeProperty("padding-bottom");
     target.style.removeProperty("margin-top");
     target.style.removeProperty("margin-bottom");
     window.setTimeout(() => {
