@@ -1,5 +1,6 @@
-import mentorPic from "../../img/mentor.png";
-import reviewerPic from "../../img/reviewer.png";
+import mentorPic from "../img/mentor.png";
+import reviewerPic from "../img/reviewer.png";
+import { gsap } from "gsap";
 
 const modes = {
   MENTOR: "MENTOR",
@@ -24,6 +25,7 @@ export default class MentorReviewer {
     );
     this._quotes = document.querySelectorAll(this._config.quotesSelector);
     this._mode = modes.MENTOR;
+    this._quoteBlocks = document.querySelectorAll(this._config.quoteBlocks);
   }
 
   _toggleMode = () => {
@@ -56,6 +58,12 @@ export default class MentorReviewer {
       this._quotes.forEach(
         (e, i) => (e.textContent = this._config.mentorQuoteTexts[i])
       );
+      this._quoteBlocks.forEach((e, i) => {
+        gsap.from(e, {
+          x: 1000,
+          duration: i * 1.2,
+        });
+      });
     } else {
       this._picture.src = reviewerPic;
       this._picture.alt =
@@ -70,6 +78,12 @@ export default class MentorReviewer {
       this._quotes.forEach(
         (e, i) => (e.textContent = this._config.reviewerQuoteTexts[i])
       );
+      this._quoteBlocks.forEach((e, i) => {
+        gsap.from(e, {
+          x: -1000,
+          duration: i * 1.2,
+        });
+      });
     }
   };
 
@@ -80,7 +94,7 @@ export default class MentorReviewer {
     this._mentorIcon.addEventListener("click", () => {
       this._setMentor();
     });
-    this._reviewerIcon.addEventListener("scroll", () => {
+    this._picture.addEventListener("click", () => {
       this._toggleMode();
     });
   };
