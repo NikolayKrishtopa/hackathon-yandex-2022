@@ -104,14 +104,27 @@
   }
 }
 @media (max-width: 700px) {
+  .resp {
+    padding: 52px 8px 0;
+  }
   .resp__title {
-    font-size: 25px;
-    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 32px;
   }
   .resp__itemTitle {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 1;
   }
   .resp__itemText {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .resp__list {
+    gap: 12px;
+  }
+  .resp__item {
+    padding: 16px 12px;
+    border-radius: 24;
   }
 }

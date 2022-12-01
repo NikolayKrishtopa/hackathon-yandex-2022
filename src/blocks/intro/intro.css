@@ -18,6 +18,7 @@
   font-size: 35px;
   font-weight: 500;
   line-height: 1.15;
+  letter-spacing: 0mm;
 }
 .intro__switch {
   color: #37935b;
@@ -29,23 +30,29 @@
   height: 30px;
 }
 @media (max-width: 1000px) {
-  .intro__heading {
-    font-size: 50px;
-    line-height: 1;
-  }
-  .intro__content {
-    font-size: 24px;
-    margin: 40px 0 60px;
-  }
   .intro {
-    max-width: 500px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 @media (max-width: 700px) {
-  .intro__heading {
-    font-size: 30px;
+  .intro {
+    padding: 24px 12px;
+    border-radius: 24px;
+    margin: -77px 0 0 0;
   }
   .intro__content {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .intro__heading {
+    margin-bottom: 13px;
+    width: 234px;
+    height: 40px;
+  }
+  .intro__cursor {
+    margin: 0 0 -3px 0;
+    padding: 0;
+    height: 24px;
   }
 }
