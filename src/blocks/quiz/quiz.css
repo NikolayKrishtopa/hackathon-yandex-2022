@@ -18,24 +18,25 @@
 }
 .quiz__header {
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
 }
 .quiz__title {
-  font-family: "YS Text";
   font-weight: 500;
   font-size: 48px;
   line-height: 48px;
   text-align: center;
   letter-spacing: -0.02em;
+  margin: 0;
   margin-bottom: 12px;
 }
 .quiz__subtitle {
-  font-family: "YS Text";
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   color: #858585;
+  margin: 0;
   margin-bottom: 56px;
 }
 .quiz__cards {
@@ -47,14 +48,16 @@
 }
 .quiz__card {
   flex: 0 1 33.333%;
-  padding: 32px 41px 96px 24px;
+  max-height: 528px;
   background: #ffffff;
   border-radius: 32px;
+  padding: 32px 33px 96px 24px;
 }
 
 /* стили для закрытых карточек */
 
 .quiz__card-close {
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,14 +65,19 @@
 
 .quiz__card-close .card__conteiner {
   display: flex;
+  gap: 32px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .card__title-disconnect {
+  margin: 0;
   text-align: center;
   color: #858585;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 /* конец стилей для закрытой карточки */
@@ -81,11 +89,12 @@
 .quiz__card-first {
 }
 .card__namber {
+  width: 60.33px;
+  height: 60px;
 }
 .cooperation-terms__pixel-icon {
 }
 .card__title {
-  font-family: "YS Text";
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
@@ -94,7 +103,6 @@
   margin: 32px 0;
 }
 .card__subtitle {
-  font-family: "YS Text";
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -106,15 +114,21 @@
   display: inline-block;
   border-radius: 120px;
   background: inherit;
-  padding: 12px 20px;
+  padding: 11px 18px;
   border: 0;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
   text-decoration: none;
   border: 2px solid #858585;
   margin-bottom: 12px;
   color: #858585;
   cursor: pointer;
+  margin-right: 9px;
+}
+
+.card__button:last-of-type {
+  margin-right: 0;
 }
 
 .card__button:hover,
@@ -130,17 +144,17 @@
 
 .card__button-end,
 .card-result__buttons-more {
-  width: 100%;
+  width: 95%;
   display: inline-block;
   border-radius: 120px;
   background: #eaeaea;
-  padding: 12px 20px;
+  padding: 20px;
   border: 0;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
-  /* border: 2px solid #858585; */
-  margin-bottom: 12px;
+  margin: 34px 0 20px;
   color: #ffffff;
   text-align: center;
   cursor: pointer;
@@ -169,6 +183,8 @@
 
 .quiz__card-result {
   width: 100%;
+  max-width: 798px;
+  max-height: 628px;
   padding: 32px 36px;
   background: #ffffff;
   border-radius: 32px;
@@ -178,6 +194,11 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 48px;
+}
+
+.card-result__title {
+  margin: 0 0 32px;
 }
 
 .card-result__conteiner > li {
@@ -185,7 +206,6 @@
 }
 
 .card-result__item__title {
-  font-family: "YS Text";
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
@@ -193,7 +213,6 @@
 }
 
 .card-result__item__text {
-  font-family: "YS Text";
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -209,17 +228,17 @@
 .card-result__buttons {
   display: flex;
   justify-content: center;
-  margin: 48px auto 0;
-  gap: 10px;
+  margin: 0 auto;
+  gap: 48px;
 }
 
 .card-result__buttons-more {
   width: auto;
-  font-family: "YS Text";
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   padding: 20px 56.5px;
+  margin: 0 0 20px;
 }
 
 .card-result__buttons-repeat {
@@ -228,18 +247,19 @@
   background: inherit;
   padding: 20px 38x;
   border: 0;
-  font-weight: 500;
   border: 2px solid transparent;
-  font-size: 14px;
   text-decoration: none;
-  margin-bottom: 12px;
-  color: #858585;
+  margin: 0 0 20px;
+  color: #000;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .card-result__buttons-repeat:hover,
 .card-result__buttons-repeat:active {
-  border: 2px solid #858585;
+  color: #858585;
 }
 
 .card-result__item {
