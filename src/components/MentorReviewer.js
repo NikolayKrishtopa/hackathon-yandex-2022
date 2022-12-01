@@ -1,5 +1,5 @@
-import mentorPic from "../img/mentor.png";
-import reviewerPic from "../img/reviewer.png";
+const reviewerPic = new URL("../img/reviewer.png", import.meta.url);
+const mentorPic = new URL("../img/mentor.png", import.meta.url);
 import { gsap } from "gsap";
 
 const modes = {
@@ -46,6 +46,7 @@ export default class MentorReviewer {
   _showContentPerMode = () => {
     if (this._mode === modes.MENTOR) {
       this._section.style.background = mentorPic;
+      console.log(this._section.style.background);
       this._mentorIcon.classList.remove(this._config.iconInactiveClass);
       this._reviewerIcon.classList.add(this._config.iconInactiveClass);
       this._quotesContainer.classList.remove(
@@ -62,8 +63,10 @@ export default class MentorReviewer {
           duration: i * 1.2,
         });
       });
+      console.log(this._section.style.background);
     } else {
       this._section.style.background = reviewerPic;
+      console.log(this._section.style);
       this._mentorIcon.classList.add(this._config.iconInactiveClass);
       this._reviewerIcon.classList.remove(this._config.iconInactiveClass);
       this._quotesContainer.classList.add(
