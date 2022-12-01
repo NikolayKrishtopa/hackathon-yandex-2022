@@ -335,6 +335,7 @@ const buttonThirdCard = document
 const cardResalt = document.querySelector(".quiz__card-result");
 const buttonCardResalt = document.querySelector(".card__button-end");
 const buttonRepeat = document.querySelector(".card-result__buttons-repeat");
+const buttonMoreVacancy = document.querySelector(".card-result__buttons-more");
 
 // для будущей логики
 let arr1 = [];
@@ -407,10 +408,19 @@ function Repeat() {
   });
 }
 
+// кнопка на вакансии
+function SendingVacancy() {
+  buttonMoreVacancy.addEventListener("click", () => {
+    vacancies.setMentor();
+    vacancies.setProgramming();
+  });
+}
+
 ArrayFirstCard();
 ArraySecondCard();
 ArrayThidrCard();
 Repeat();
+SendingVacancy();
 // console.log("programming", programming);
 
 // функция открытия второй карточки
