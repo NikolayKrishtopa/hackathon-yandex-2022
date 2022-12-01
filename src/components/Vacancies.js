@@ -1,10 +1,9 @@
 export default class Vacancies {
-  constructor(a) {
-    this._some = a;
+  constructor() {
     this._vacancies = document.querySelectorAll(".vacancies__position");
     this._title = document.getElementById("positionsListTitle");
-    this._pythonVac = vacancies[0];
-    this._analisVac = vacancies[1];
+    this._pythonVac = this._vacancies[0];
+    this._analisVac = this._vacancies[1];
     this._mentorButton = document.getElementById("vacMentorButton");
     this._reviewerButton = document.getElementById("vacReviewerButton");
     this._roleButtons = document.querySelectorAll(".vacancies__roleButton");
@@ -19,34 +18,45 @@ export default class Vacancies {
     this._allButton = document.getElementById("vacAllButton");
     this._role = "";
     this._faculty = "all";
-    console.log(this._vacancies);
+    this._renderVacancies();
+    this._renderFacultButtons("vacAllButton");
   }
 
   _renderFacultButtons(id) {
-    this._facultyButtonst.forEach((e) => {
-      e.id === id
-        ? e.classList.add("vacancies__facultyButton_active")
-        : e.classList.remove("vacancies__facultyButton_active");
+    this._facultyButtons.forEach((e) => {
+      if (e.id === id) {
+        e.classList.add("vacancies__facultyButton_active");
+      } else {
+        e.classList.remove("vacancies__facultyButton_active");
+      }
     });
   }
 
   _renderVacancies() {
-    if (role === "reviewer") {
+    if (this._role === "reviewer") {
       this._pythonVac.classList.remove("vacancies__position_shown");
       this._analisVac.classList.remove("vacancies__position_shown");
-      this._title.textContent += ` (0)`;
-    } else if (faculty === "all") {
+      this._title.textContent = `Открытые вакансии ревьюера (0)`;
+    } else if (this._faculty === "all") {
       this._pythonVac.classList.add("vacancies__position_shown");
       this._analisVac.classList.add("vacancies__position_shown");
-      this._title.textContent += ` (2)`;
-    } else if (faculty === "programming") {
+      this._title.textContent = `Открытые вакансии (2)`;
+    } else if (this._faculty === "programming") {
       this._pythonVac.classList.add("vacancies__position_shown");
       this._analisVac.classList.remove("vacancies__position_shown");
-      this._title.textContent += ` в программировании (1)`;
-    } else if (faculty === "analisys") {
+      this._title.textContent = `Открытые вакансии в программировании (1)`;
+    } else if (this._faculty === "analisys") {
       this._pythonVac.classList.remove("vacancies__position_shown");
       this._analisVac.classList.add("vacancies__position_shown");
-      this._title.textContent += ` в анализе данных (1)`;
+      this._title.textContent = `Открытые вакансии в анализе данных (1)`;
+    } else if (this._role === "mentor" && this._faculty === "all") {
+      this._pythonVac.classList.add("vacancies__position_shown");
+      this._analisVac.classList.add("vacancies__position_shown");
+      this._title.textContent = `Открытые вакансии наставника (0)`;
+    } else {
+      this._pythonVac.classList.remove("vacancies__position_shown");
+      this._analisVac.classList.remove("vacancies__position_shown");
+      this._title.textContent = `Открытые вакансии (0)`;
     }
   }
   setReviewer() {
@@ -106,6 +116,10 @@ export default class Vacancies {
     });
     this._marketingButton.addEventListener("click", () => {
       this.setMarketing();
+      this._renderVacancies();
+    });
+    this._managementButton.addEventListener("click", () => {
+      this.setManagement();
       this._renderVacancies();
     });
     this._allButton.addEventListener("click", () => {

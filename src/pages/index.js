@@ -69,26 +69,8 @@ extendPositionButtons.forEach((e) => {
   });
 });
 
-// const vacancies = new Vacancies('хуй');
-// vacancies.initialize();
-// let vacRole = "";
-// let vacType = "";
-
-// function renderFacultButtons(buttonList, id) {
-//   return buttonList.forEach((e) => {
-//     e.id === id
-//       ? e.classList.add("vacancies__facultyButton_active")
-//       : e.classList.remove("vacancies__facultyButton_active");
-//   });
-// }
-
-// const facultButtons = document.querySelectorAll(".vacancies__facultyButton");
-
-// facultButtons.forEach((e, i, arr) => {
-//   e.addEventListener("click", () => {
-//     renderFacultButtons(arr, e.id);
-//   });
-// });
+const vacancies = new Vacancies();
+vacancies.initialize();
 
 //***Реализация смены значений в секции "В роли наставника вы будете..."***
 const spanToSwitch = document.querySelector(".resp__introSwitch");
@@ -103,9 +85,9 @@ const getRandomValue = () => {
   const randomIndex = Math.floor(Math.random() * spanValues.length);
   return spanValues[randomIndex];
 };
-setInterval(() => {
-  spanToSwitch.textContent = getRandomValue();
-}, 2000);
+// setInterval(() => {
+//   spanToSwitch.textContent = getRandomValue();
+// }, 2000);
 
 // ***Реализация появления сообщений при скролле
 
