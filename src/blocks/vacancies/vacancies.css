@@ -63,6 +63,9 @@
   box-sizing: border-box;
   background-color: transparent;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 .vacancies__roleButton_active {
   border-radius: 26px;
@@ -158,6 +161,7 @@
   padding: 0;
   flex-direction: column;
   display: none;
+  position: relative;
 }
 .vacancies__spoiler_shown {
   display: flex;
@@ -211,4 +215,75 @@
   height: 26px;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .vacancies__container {
+    gap: 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .vacancies__container {
+    gap: 40px;
+  }
+  .vacancies {
+    gap: 32px;
+    padding: 0 60px 132px;
+  }
+  @media (max-width: 900px) {
+    /* .vacancies__container {
+      grid-template-columns: 1fr;
+    } */
+    .vacancies__roleButton,
+    .vacancies__positionTitle,
+    .vacancies__facultyButton,
+    .vacancies__spoilerText {
+      font-size: 16px;
+      line-height: 22.4px;
+    }
+
+    .vacancies__posDescrItem {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 800px) {
+    .vacancies__container {
+      grid-template-columns: 1fr;
+    }
+    .vacancies__title {
+      font-size: 30px;
+      line-height: 1.2;
+      max-width: 274px;
+    }
+    .vacancies__spoilerButtons {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .vacancies__shareButton {
+      position: absolute;
+      right: 0;
+      top: 0;
+      right: 30px;
+      top: -30px;
+    }
+    .vacancies__responseButton_type_noVac {
+      margin-top: 24px;
+      width: 280px;
+      height: 50px;
+      border-radius: 25px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .vacancies {
+    padding: 88px 8px;
+  }
+  .vacancies__posExtendButton {
+    right: 17px;
+  }
+  .vacancies__positionTitle,
+  .vacancies__descrContainer {
+    max-width: 273px;
+  }
 }
