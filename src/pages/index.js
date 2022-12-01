@@ -302,7 +302,7 @@ let _slideDown = (target, duration = 500) => {
     target.style.transitionDuration = duration + "ms";
     target.style.height = height + "px";
     target.style.removeProperty("padding-top");
-    target.style.removeProperty("padding-bottom");
+    // target.style.removeProperty("padding-bottom");
     target.style.removeProperty("margin-top");
     target.style.removeProperty("margin-bottom");
     window.setTimeout(() => {
@@ -330,7 +330,6 @@ const firstCard = document.querySelector(".quiz__card-first");
 const buttonFirstCardBtn = document
   .querySelector(".quiz__card-first")
   .querySelectorAll(".card__button");
-// .item(0).id;
 
 // блок второй карточки
 const secondCardClose = document.querySelector(
@@ -355,6 +354,7 @@ const cardResalt = document.querySelector(".quiz__card-result");
 const buttonCardResalt = document.querySelector(".card__button-end");
 const buttonRepeat = document.querySelector(".card-result__buttons-repeat");
 
+// для будущей логики
 let arr1 = [];
 let arr2 = [];
 let arr3 = [];
@@ -371,7 +371,6 @@ function ArrayFirstCard() {
       secondCardOpen.classList.remove("disconnect");
     }
   });
-  console.log("arr1", arr1);
 }
 
 ArrayFirstCard();
@@ -387,7 +386,6 @@ function ArraySecondCard() {
       thirdCardOpen.classList.remove("disconnect");
     }
   });
-  console.log("arr2", arr2);
 }
 
 // нажатие кнопок из третьей карточки карточки
@@ -406,7 +404,6 @@ function ArrayThidrCard() {
       cardResalt.classList.remove("disconnect");
     }
   });
-  console.log("arr3", arr3);
 }
 
 // нажатие кнопки возврата
@@ -418,7 +415,7 @@ function Repeat() {
     buttonSecondCardBtn.forEach((el) => {
       el.classList.remove("button-pressed");
     });
-    buttonThirdCard.forEach((el) => {
+    buttonSecondCardBtn.forEach((el) => {
       el.classList.remove("button-pressed");
     });
     cardResalt.classList.add("disconnect");
@@ -436,6 +433,4 @@ Repeat();
 
 // функция открытия второй карточки
 
-// *нужна логика для перехода на блок вакансий
-
-// ========== конец блока  quiz ============
+// ========== конец блока quiz ============
