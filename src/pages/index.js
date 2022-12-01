@@ -5,6 +5,7 @@ import Vacancies from "../components/Vacancies";
 import minusIcon from "../img/minusIcon.png";
 import plusIcon from "../img/plusIcon.png";
 import { gsap } from "gsap";
+import Popup from "../components/Popup";
 
 // Кнопка бургерного меню
 
@@ -418,3 +419,25 @@ SendingVacancy();
 // функция открытия второй карточки
 
 // ========== конец блока quiz ============
+
+// ***Реализация логики попапов***
+
+// Кнопки открытия попапа application-popup
+const applicationButtonElement = document.querySelector(".apply__button");
+const headerButtonElement = document.querySelector(".header__navBlockButton");
+
+const applicationPopup = new Popup(
+  '.popup_type_application'
+);
+
+// Функция-обработчик клика по кнопке applicationButtonElement
+const handleApplicationButtonClick = () => {
+  applicationPopup.open();
+};
+
+// Установка слушателя клика по кнопкам открытия попапа
+applicationButtonElement.addEventListener('click', handleApplicationButtonClick);
+headerButtonElement.addEventListener('click', handleApplicationButtonClick);
+
+// Установка слушателей событий попапу
+applicationPopup.setEventListeners();
