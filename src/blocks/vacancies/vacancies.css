@@ -111,12 +111,16 @@
   border-bottom: 1px solid #858585;
   position: relative;
 }
+.vacancies__position_type_noVac {
+  border: none;
+}
 .vacancies__position_shown {
   display: flex;
 }
 .vacancies__positionTitle {
   margin: 0;
   padding: 0;
+  max-width: 488px;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
@@ -125,6 +129,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  max-width: 488px;
   gap: 20px;
 }
 .vacancies__posDescrItem {
@@ -186,6 +191,9 @@
   font-weight: 500;
   line-height: 1.25;
   cursor: pointer;
+}
+.vacancies__responseButton_type_noVac {
+  margin-top: 20px;
 }
 .vacancies__detailsButton {
   margin: 0 9px 0 0;

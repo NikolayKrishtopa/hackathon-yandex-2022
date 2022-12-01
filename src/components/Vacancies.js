@@ -4,6 +4,7 @@ export default class Vacancies {
     this._title = document.getElementById("positionsListTitle");
     this._pythonVac = this._vacancies[0];
     this._analisVac = this._vacancies[1];
+    this._noVac = this._vacancies[2];
     this._mentorButton = document.getElementById("vacMentorButton");
     this._reviewerButton = document.getElementById("vacReviewerButton");
     this._roleButtons = document.querySelectorAll(".vacancies__roleButton");
@@ -36,26 +37,32 @@ export default class Vacancies {
     if (this._role === "reviewer") {
       this._pythonVac.classList.remove("vacancies__position_shown");
       this._analisVac.classList.remove("vacancies__position_shown");
+      this._noVac.classList.add("vacancies__position_shown");
       this._title.textContent = `Открытые вакансии ревьюера (0)`;
     } else if (this._faculty === "all") {
       this._pythonVac.classList.add("vacancies__position_shown");
       this._analisVac.classList.add("vacancies__position_shown");
+      this._noVac.classList.remove("vacancies__position_shown");
       this._title.textContent = `Открытые вакансии (2)`;
     } else if (this._faculty === "programming") {
       this._pythonVac.classList.add("vacancies__position_shown");
       this._analisVac.classList.remove("vacancies__position_shown");
+      this._noVac.classList.remove("vacancies__position_shown");
       this._title.textContent = `Открытые вакансии в программировании (1)`;
     } else if (this._faculty === "analisys") {
       this._pythonVac.classList.remove("vacancies__position_shown");
       this._analisVac.classList.add("vacancies__position_shown");
+      this._noVac.classList.remove("vacancies__position_shown");
       this._title.textContent = `Открытые вакансии в анализе данных (1)`;
     } else if (this._role === "mentor" && this._faculty === "all") {
       this._pythonVac.classList.add("vacancies__position_shown");
       this._analisVac.classList.add("vacancies__position_shown");
+      this._noVac.classList.remove("vacancies__position_shown");
       this._title.textContent = `Открытые вакансии наставника (0)`;
     } else {
       this._pythonVac.classList.remove("vacancies__position_shown");
       this._analisVac.classList.remove("vacancies__position_shown");
+      this._noVac.classList.add("vacancies__position_shown");
       this._title.textContent = `Открытые вакансии (0)`;
     }
   }

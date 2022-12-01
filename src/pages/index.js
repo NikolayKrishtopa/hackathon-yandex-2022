@@ -2,25 +2,9 @@ import "./index.css";
 import scrollSelectors from "../utils/config";
 import MentorReviewer from "../components/MentorReviewer.js";
 import Vacancies from "../components/Vacancies";
-import { gsap } from "gsap";
 import minusIcon from "../img/minusIcon.png";
 import plusIcon from "../img/plusIcon.png";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Swiper JS
-import Swiper from "swiper";
-// import Swiper styles
-import "swiper/css";
-
-new Swiper(".quiz__cards", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
 
 // Кнопка бургерного меню
 
@@ -30,8 +14,6 @@ burgerButton.addEventListener("click", () => {
   headerMenu.classList.contains("header__linksBlock_active")
     ? headerMenu.classList.remove("header__linksBlock_active")
     : headerMenu.classList.add("header__linksBlock_active");
-
-  console.log(headerMenu.classList);
 });
 
 // ***Реализация эффекта ластика в хедере***

@@ -347,6 +347,14 @@
     padding: 0;
     margin: 8px 0 25px;
   }
+
+  .quiz__cards {
+    display: flex;
+    overflow: auto;
+  }
+  .quiz__card {
+    min-width: 324px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -390,6 +398,10 @@
     margin: 24px 0 10px 5px;
     font-size: 16px;
     line-height: 20px;
+  }
+  .quiz__cards {
+    display: flex;
+    overflow: auto;
   }
 }
 

@@ -52,6 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 50px;
 }
 
 .expert-info__step:last-of-type {
@@ -64,6 +65,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 50px;
 }
 
 .expert-info__step-number {
@@ -91,6 +93,7 @@
   line-height: 1.2;
   display: flex;
   align-items: center;
+  min-height: 50px;
 }
 
 .expert-info__image {
@@ -110,12 +113,12 @@
 
 @media (max-width: 1000px) {
   .expert-info {
-    padding: 70px 60px;
+    padding: 80px 60px;
   }
 
   .expert-info__step-image-container {
     flex-direction: column;
-    border-radius: 32px;
+    border-radius: 24px;
   }
 
   .expert-info__steps-list {
@@ -125,8 +128,8 @@
 
   .expert-info__image {
     width: 100%;
-    max-height: 200px;
-    border-radius: 0 0 32px 32px;
+    max-height: 267px;
+    border-radius: 0 0 24px 24px;
   }
 
   .expert-info__title {
@@ -148,13 +151,6 @@
     margin-bottom: 0;
   }
 
-  .expert-info__step-number {
-    margin-right: 20px;
-    min-width: 45px;
-    height: 45px;
-    font-size: 30px;
-  }
-
   .expert-info__step-title {
     font-size: 30px;
   }
@@ -162,22 +158,15 @@
 
 @media (max-width: 600px) {
   .expert-info {
-    padding: 50px 40px;
+    padding: 80px 40px;
   }
 
   .expert-info__step-image-container {
     flex-direction: column;
-    border-radius: 16px;
   }
 
   .expert-info__steps-list {
     padding: 28px 12px;
-  }
-
-  .expert-info__image {
-    width: 100%;
-    max-height: 130px;
-    border-radius: 0 0 16px 16px;
   }
 
   .expert-info__title {
@@ -193,14 +182,55 @@
     margin-bottom: 0;
   }
 
+  .expert-info__step-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expert-info {
+    padding: 68px 8px;
+  }
+
+  .expert-info__steps-list {
+    padding: 16px 12px;
+  }
+
+  .expert-info__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .expert-info__step {
+    margin-bottom: 20px;
+  }
+
+  .expert-info__step:last-of-type {
+    margin-bottom: 0;
+  }
+
   .expert-info__step-number {
     margin-right: 16px;
-    min-width: 30px;
-    height: 30px;
-    font-size: 20px;
   }
 
   .expert-info__step-title {
     font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .expert-info__step-number {
+    margin-right: 12px;
+    min-width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .expert-info__step-title {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
