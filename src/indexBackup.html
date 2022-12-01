@@ -646,14 +646,14 @@
             </div>
           </div>
         </section>
-        <section class="quiz" id="quiz">
-          <div class="quiz__conteiner">
+        <section class="quiz" id="quiz" >
+          <div class="quiz__conteiner swiper">
             <div class="quiz__header">
               <p class="quiz__title">Кем ты можешь стать <br />в Практикуме?</p>
               <p class="quiz__subtitle">Поможем понять за 5 минут</p>
             </div>
-            <div class="quiz__cards">
-              <div class="quiz__card quiz__card-first">
+            <div class="quiz__cards swiper-wrapper">
+              <div class="quiz__card quiz__card-first swiper-slide">
                 <div class="card__namber">
                   <img
                     src="<%=require('./src/images/first-number.svg')%>"
@@ -670,7 +670,7 @@
                   <button class="card__button">Менеджмент</button>
                 </div>
               </div>
-              <div class="disconnect quiz__card quiz__card-second">
+              <div class="disconnect quiz__card quiz__card-second swiper-slide">
                 <div class="card__namber">
                   <img
                     src="<%=require('./src/images/second-number-active.svg')%>"
@@ -687,7 +687,7 @@
                   <div class="card__button">Объяснять ошибки</div>
                 </div>
               </div>
-              <div class="quiz__card quiz__card-close quiz__card-second">
+              <div class="quiz__card quiz__card-close quiz__card-second swiper-slide">
                 <div class="card__conteiner">
                   <div class="card__namber">
                     <img
@@ -702,7 +702,7 @@
                   </p>
                 </div>
               </div>
-              <div class="disconnect quiz__card quiz__card-third">
+              <div class="disconnect quiz__card quiz__card-third swiper-slide">
                 <div class="card__namber">
                   <img
                     src="<%=require('./src/images/third_number-active.svg')%>"
@@ -726,7 +726,7 @@
                 </div>
                 <div class="card__button-end">Узнать результат</div>
               </div>
-              <div class="quiz__card quiz__card-close quiz__card-third">
+              <div class="quiz__card quiz__card-close quiz__card-third swiper-slide">
                 <div class="card__conteiner">
                   <div class="card__namber">
                     <img

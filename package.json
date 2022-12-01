@@ -28,6 +28,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "gsap": "file:gsap-bonus.tgz"
+    "gsap": "file:gsap-bonus.tgz",
+    "swiper": "^8.4.5"
   }
 }
