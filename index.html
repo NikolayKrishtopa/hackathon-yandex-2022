@@ -301,5 +301,68 @@
   </main>
   <footer class="footer">
   </footer>
+
+  <div class="popup popup_type_application">
+    <div class="popup__container">
+      <button class="popup__close-button popup__link" type="button"></button>
+      <h3 class="popup__title">Не&nbsp;нашлось<br> подходящей позиции?</h3>
+      <form class="popup__form" name="application" novalidate>
+        <div class="popup__floating-label-container">
+          <input id="application-name-input" class="popup__input popup__input_type_name" type="text" name="application-name" placeholder="ФИО*"  minlength="2" maxlength="40" required>
+          <label for="application-name-input" class="popup__input-label">ФИО*</label>
+          <span class="popup__input-error application-name-input-error"></span>
+        </div>
+        <div class="popup__grid-container">
+          <div class="popup__input-error-container popup__floating-label-container">
+            <input id="application-email-input" class="popup__input popup__input_type_email" type="email" name="application-email" placeholder="Почта*"  minlength="2" maxlength="40" required>
+            <label for="application-email-input" class="popup__input-label">Почта*</label>
+            <span class="popup__input-error application-email-input-error"></span>
+          </div>
+          <div class="popup__input-error-container popup__floating-label-container">
+            <input id="application-telephone-input" class="popup__input popup__input_type_telephone" type="tel" name="application-telephone" placeholder="Телефон*"  minlength="2" maxlength="40" required>
+            <label for="application-telephone-input" class="popup__input-label">Телефон*</label>
+            <span class="popup__input-error application-telephone-input-error"></span>
+          </div>
+          <div class="popup__input-error-container popup__floating-label-container">
+            <select name="application-role" id="application-role-select" class="popup__input popup__select" placeholder="Какая роль вам ближе*">
+              <option value="" hidden></option>
+              <option value="application-mentor" class="popup__option">Наставник</option>
+              <option value="application-reviewer" class="popup__option">Ревьюер</option>
+            </select>
+            <label for="application-role-select" class="popup__input-label">Какая роль вам ближе*</label>
+            <span class="popup__input-error application-role-input-error"></span>
+          </div>
+          <div class="popup__input-error-container popup__floating-label-container">
+            <select name="application-faculty" id="application-faculty-select" class="popup__input popup__select" placeholder="Выберите направление (факультет)*">
+              <option value="" hidden></option>
+              <option value="application-programming" class="popup__option">Программирование</option>
+              <option value="application-data-analysis" class="popup__option">Анализ данных</option>
+              <option value="application-management" class="popup__option">Менеджмент</option>
+              <option value="application-design" class="popup__option">Дизайн</option>
+              <option value="application-marketing" class="popup__option">Маркетинг</option>
+            </select>
+            <label for="application-faculty-select" class="popup__input-label">Выберите направление (факультет)*</label>
+            <span class="popup__input-error application-faculty-input-error"></span>
+          </div>
+        </div>
+        <div class="popup__floating-label-container">
+          <textarea name="application-technologies" id="application-technologies-textarea" rows="7" class="popup__input popup__textarea" placeholder="Перечислите набор технологий, которыми вы владеете и уровень владения каждой"></textarea>
+        </div>
+        <div class="popup__floating-label-container">
+          <input id="application-resume-input" class="popup__input popup__input_type_resume" type="url" name="application-resume" placeholder="Ссылка на резюме*" required>
+          <label for="application-resume-input" class="popup__input-label popup__input-label_type_textarea">Ссылка на резюме*</label>
+          <span class="popup__input-error application-resume-input-error"></span>
+        </div>
+        <div class="popup__checkbox-container">
+          <input id="application-checkbox" type="checkbox" class="popup__checkbox">
+          <label for="application-checkbox" class="popup__label">
+            <p class="popup__confirmation-text">Я&nbsp;даю согласие АНО ДПО &laquo;ШАД&raquo; и&nbsp;ООО &laquo;ЯНДЕКС&raquo; на&nbsp;<a href="https://yandex.ru/legal/confidential/" class="popup_confirm-link popup__link">обработку указанных данных</a> для целей рассмотрения анкеты и&nbsp;обратной связи по&nbsp;ней.</p>
+          </label>
+          <span class="popup__input-error application-checkbox-error"></span>
+        </div>
+        <input class="popup__submit-button popup__link" type="submit" value="Откликнуться">
+      </form>
+    </div>
+  </div>
 </body>
 </html>
