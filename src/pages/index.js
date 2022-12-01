@@ -107,8 +107,9 @@ function changeSlide(direction) {
 
 // ***Реализация логики попапов***
 
-// Кнопка открытия попапа application-popup
+// Кнопки открытия попапа application-popup
 const applicationButtonElement = document.querySelector(".apply__button");
+const headerButtonElement = document.querySelector(".header__navBlockButton");
 
 const applicationPopup = new Popup(
   '.popup_type_application'
@@ -119,8 +120,9 @@ const handleApplicationButtonClick = () => {
   applicationPopup.open();
 };
 
-// Установка слушателя клика по кнопке открытия попапа
+// Установка слушателя клика по кнопкам открытия попапа
 applicationButtonElement.addEventListener('click', handleApplicationButtonClick);
+headerButtonElement.addEventListener('click', handleApplicationButtonClick);
 
 // Установка слушателей событий попапу
 applicationPopup.setEventListeners();
