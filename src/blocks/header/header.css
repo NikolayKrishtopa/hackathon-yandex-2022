@@ -1,6 +1,6 @@
 .header {
   margin: 0;
-  padding: 12px 120px 200px;
+  padding: 12px 120px 310px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -9,11 +9,10 @@
   background-color: #000;
   position: relative;
   overflow: hidden;
-  max-height: 100vh;
 }
 
 .header__navbar {
-  margin: 0 0 142px 0;
+  margin: 0 0 160px 0;
   padding: 16px;
   width: 100%;
   display: flex;
@@ -37,9 +36,10 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 12px;
 }
 .header__link {
-  margin: 0 12px;
+  margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.85);
   font-size: 14px;
@@ -60,12 +60,10 @@
 }
 .header__link:hover {
   color: #37935b;
-  transform: scale(1.05);
 }
 .header__navBlockButton:hover {
   color: #37935b;
   border-color: #37935b;
-  transform: scale(1.05);
 }
 .header__title {
   margin: 0;
@@ -81,7 +79,7 @@
 }
 .header__subtitle {
   pointer-events: none;
-  margin: 24px 0 56px;
+  margin: 20px 0 56px;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.5;
@@ -109,8 +107,7 @@
   flex-shrink: 0;
 }
 .header__button:hover {
-  background-color: #37935b;
-  transform: scale(1.02);
+  background-color: #37935b !important;
 }
 
 .header span {
@@ -125,6 +122,46 @@
   background-position: center;
   border-radius: 50%;
   pointer-events: none;
+}
+.header__burgerButton {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: none;
+}
+.header__navbarWrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  /* .header__navbar {
+    align-items: flex-start;
+  } */
+  .header__burgerButton {
+    display: flex;
+    align-self: start;
+  }
+  .header__navbarWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+  .header__linksBlock {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+    display: none;
+  }
+  .header__navBlockButton {
+    display: none;
+  }
+  .header__linksBlock_active {
+    display: flex;
+  }
 }
 @media (max-width: 1000px) {
   .header {
@@ -154,6 +191,7 @@
 @media (max-width: 600px) {
   .header {
     padding: 12px 40px 200px;
+    min-height: 655px;
   }
   .header__title {
     font-size: 50px;
@@ -173,16 +211,32 @@
   }
 }
 @media (max-width: 600px) {
+  .header {
+    padding: 12px 8px;
+    background: url(../../img/headerBkgMobile.png);
+  }
+  .header__navbar {
+    margin-bottom: 80px;
+    padding: 12px;
+  }
   .header__title {
-    font-size: 40px;
+    font-size: 44px;
+    line-height: 1.09;
   }
   .header__subtitle {
-    font-size: 12px;
+    margin: 12px 0 32px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 334px;
   }
   .header__button {
-    width: 160px;
-    height: 45px;
-    border-radius: 22px;
-    font-size: 10px;
+    width: 280px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .header span {
+    display: none;
   }
 }

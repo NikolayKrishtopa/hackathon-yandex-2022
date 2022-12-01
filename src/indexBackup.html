@@ -127,7 +127,7 @@
                 <div class="expert-info__step-container">
                   <div class="expert-info__step-number">1</div>
                   <h3 class="expert-info__step-title">
-                    Выберете роль и&nbsp;заполните заявку
+                    Выберите роль и&nbsp;заполните заявку
                   </h3>
                 </div>
                 <img
@@ -461,7 +461,7 @@
                   </div>
                   <div class="article articles__item">
                     <h3 class="articles__title">
-                      «Все моё наставничество — это челендж»
+                      «Все моё наставничество — это челендж»
                     </h3>
                     <div class="dsen__link">
                       <p class="dsen__link-title">
@@ -610,7 +610,7 @@
                           Зоя Король
                         </div>
                         <div class="storie-portfolio__info-subtitle">
-                          Наставник курса «Инженер по тестированию»
+                          Наставник курса «Инженер по тестированию»
                         </div>
                       </div>
                     </div>
@@ -646,142 +646,160 @@
             </div>
           </div>
         </section>
-       <section class="quiz" id="quiz">
-        <div class="quiz__conteiner">
-          <div class="quiz__header">
-            <h2 class="quiz__title">Кем ты можешь стать <br />в Практикуме?</h2>
-            <p class="quiz__subtitle">Поможем понять за 5 минут</p>
-          </div>
-          <div class="quiz__cards">
-            <div class="quiz__card quiz__card-first">
-              <div class="card__namber">
-                <img src="<%=require('./src/images/first-number.svg')%>" alt="Карточка номер 1"
-                  class="cooperation-terms__pixel-icon" />
-              </div>
-              <p class="card__title">В какой сфере <br />ты профи?</p>
-              <div class="card__buttons">
-                <button id="programming" class="card__button">Программирование</button>
-                <button id="analysis" class="card__button">Анализ данных</button>
-                <button id="design" class="card__button">Дизайн</button>
-                <button id="marketing" class="card__button">Маркетинг</button>
-                <button id="management" class="card__button">Менеджмент</button>
-              </div>
+        <section class="quiz" id="quiz">
+          <div class="quiz__conteiner">
+            <div class="quiz__header">
+              <p class="quiz__title">Кем ты можешь стать <br />в Практикуме?</p>
+              <p class="quiz__subtitle">Поможем понять за 5 минут</p>
             </div>
-            <div class="disconnect quiz__card quiz__card-second">
-              <div class="card__namber">
-                <img src="<%=require('./src/images/second-number-active.svg')%>" alt="Карточка номер 2"
-                  class="cooperation-terms__pixel-icon" />
-              </div>
-              <div class="card__title">Что тебе интереснее?</div>
-              <div class="card__buttons">
-                <div id="interesting" class="card__button">Выступать публично</div>
-                <div id="check" class="card__button">Проверять работы</div>
-                <div id="inspiration" class="card__button">Вдохновлять</div>
-                <div id="сommunication" class="card__button">Общаться</div>
-                <div id="explanation" class="card__button">Объяснять ошибки</div>
-              </div>
-            </div>
-            <div class="quiz__card quiz__card-close quiz__card-second">
-              <div class="card__conteiner">
+            <div class="quiz__cards">
+              <div class="quiz__card quiz__card-first">
                 <div class="card__namber">
-                  <img src="<%=require('./src/images/second_number.svg')%>" alt="Карточка номер 2 неоткрыта"
-                    class="cooperation-terms__pixel-icon" />
+                  <img
+                    src="<%=require('./src/images/first-number.svg')%>"
+                    alt="Карточка номер 1"
+                    class="cooperation-terms__pixel-icon"
+                  />
                 </div>
-                <p class="card__title-disconnect">
-                  Карточка откроется после ответа<br />
-                  на предыдущий вопрос
-                </p>
+                <p class="card__title">В какой сфере <br />ты профи?</p>
+                <div class="card__buttons">
+                  <button class="card__button">Программирование</button>
+                  <button class="card__button">Анализ данных</button>
+                  <button class="card__button">Дизайн</button>
+                  <button class="card__button">Маркетинг</button>
+                  <button class="card__button">Менеджмент</button>
+                </div>
               </div>
-            </div>
-            <div class="disconnect quiz__card quiz__card-third">
-              <div class="card__namber">
-                <img src="<%=require('./src/images/third_number-active.svg')%>" alt="Стрелка"
-                  class="cooperation-terms__pixel-icon" />
-              </div>
-              <div class="card__namber disconnect">
-                <img src="<%=require('./src/images/third_number.svg')%>" alt="Карточка номер 3 неоткрыта"
-                  class="cooperation-terms__pixel-icon" />
-              </div>
-              <div class="card__title">Какой у тебя опыт работы?</div>
-              <div class="card__buttons">
-                <div id="1" class="card__button">1—2 года</div>
-                <div id="2" class="card__button">2—5 лет</div>
-                <div id="5" class="card__button">5—7 лет</div>
-                <div id="7" class="card__button">Больше 7 лет</div>
-              </div>
-              <div class="card__button-end">Узнать результат</div>
-            </div>
-            <div class="quiz__card quiz__card-close quiz__card-third">
-              <div class="card__conteiner">
+              <div class="disconnect quiz__card quiz__card-second">
                 <div class="card__namber">
-                  <img src="<%=require('./src/images/third_number.svg')%>" alt="Карточка номер 3 неоткрыта"
-                    class="cooperation-terms__pixel-icon" />
+                  <img
+                    src="<%=require('./src/images/second-number-active.svg')%>"
+                    alt="Карточка номер 2"
+                    class="cooperation-terms__pixel-icon"
+                  />
                 </div>
-                <p class="card__title-disconnect">
-                  Карточка откроется после ответа<br />
-                  на предыдущий вопрос
-                </p>
+                <div class="card__title">Что тебе интереснее?</div>
+                <div class="card__buttons">
+                  <div class="card__button">Выступать публично</div>
+                  <div class="card__button">Проверять работы</div>
+                  <div class="card__button">Вдохновлять</div>
+                  <div class="card__button">Общаться</div>
+                  <div class="card__button">Объяснять ошибки</div>
+                </div>
+              </div>
+              <div class="quiz__card quiz__card-close quiz__card-second">
+                <div class="card__conteiner">
+                  <div class="card__namber">
+                    <img
+                      src="<%=require('./src/images/second_number.svg')%>"
+                      alt="Карточка номер 2 неоткрыта"
+                      class="cooperation-terms__pixel-icon"
+                    />
+                  </div>
+                  <p class="card__title-disconnect">
+                    Карточка откроется после ответа<br />
+                    на предыдущий вопрос
+                  </p>
+                </div>
+              </div>
+              <div class="disconnect quiz__card quiz__card-third">
+                <div class="card__namber">
+                  <img
+                    src="<%=require('./src/images/third_number-active.svg')%>"
+                    alt="Стрелка"
+                    class="cooperation-terms__pixel-icon"
+                  />
+                </div>
+                <div class="card__namber disconnect">
+                  <img
+                    src="<%=require('./src/images/third_number.svg')%>"
+                    alt="Карточка номер 3 неоткрыта"
+                    class="cooperation-terms__pixel-icon"
+                  />
+                </div>
+                <div class="card__title">Какой у тебя опыт работы?</div>
+                <div class="card__buttons">
+                  <div class="card__button">1—2 года</div>
+                  <div class="card__button">2—5 лет</div>
+                  <div class="card__button">5—7 лет</div>
+                  <div class="card__button">Больше 7 лет</div>
+                </div>
+                <div class="card__button-end">Узнать результат</div>
+              </div>
+              <div class="quiz__card quiz__card-close quiz__card-third">
+                <div class="card__conteiner">
+                  <div class="card__namber">
+                    <img
+                      src="<%=require('./src/images/third_number.svg')%>"
+                      alt="Карточка номер 3 неоткрыта"
+                      class="cooperation-terms__pixel-icon"
+                    />
+                  </div>
+                  <p class="card__title-disconnect">
+                    Карточка откроется после ответа<br />
+                    на предыдущий вопрос
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__card-result disconnect">
+              <div class="card__title">
+                Ты можешь стать отличным<br />
+                наставником в программировании
+              </div>
+              <p class="card__subtitle">Смотри, какие у нас есть вакансии:</p>
+              <!-- <div class="card-result__conteiner"> -->
+              <ul class="card-result__conteiner">
+                <li>
+                  <a href="#" class="card-result__item">
+                    <div class="card-result__item__title">
+                      Наставник на курс «Java-разработчик»
+                    </div>
+                    <div class="card-result__item__text">
+                      <p>на 10 месяцев</p>
+                      <p>2—3 часа в день</p>
+                      <p>до 55 000 руб/мес</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="card-result__item">
+                    <div class="card-result__item__title">
+                      Наставник на курс «Мидл фронтенд-разработчик»
+                    </div>
+                    <div class="card-result__item__text">
+                      <p>на 9 месяцев</p>
+                      <p>2—3 часа в день</p>
+                      <p>в среднем 35 000 руб/мес</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="card-result__item">
+                    <div class="card-result__item__title">
+                      Наставник на курс «Ассинхронное программирование на
+                      Phyton»
+                    </div>
+                    <div class="card-result__item__text">
+                      <p>на 6 месяцев</p>
+                      <p>2—3 часа в день</p>
+                      <p>в среднем 45 000 руб/мес</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- </div> -->
+              <div class="card-result__buttons">
+                <button class="card-result__buttons-more">
+                  Смотреть еще 12 вакансий
+                </button>
+                <button class="card-result__buttons-repeat">
+                  Пройти тест заново
+                </button>
               </div>
             </div>
           </div>
-          <div class="quiz__card-result disconnect">
-            <h3 class="card__title card-result__title">
-              Ты можешь стать отличным<br />
-              наставником в программировании
-            </h3>
-            <p class="card__subtitle">Смотри, какие у нас есть вакансии:</p>
-            <!-- <div class="card-result__conteiner"> -->
-            <ul class="card-result__conteiner">
-              <li>
-                <a href="#" class="card-result__item">
-                  <div class="card-result__item__title">
-                    Наставник на курс «Java-разработчик»
-                  </div>
-                  <div class="card-result__item__text">
-                    <p>на 10 месяцев</p>
-                    <p>2—3 часа в день</p>
-                    <p>до 55 000 руб/мес</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="card-result__item">
-                  <div class="card-result__item__title">
-                    Наставник на курс «Мидл фронтенд-разработчик»
-                  </div>
-                  <div class="card-result__item__text">
-                    <p>на 9 месяцев</p>
-                    <p>2—3 часа в день</p>
-                    <p>в среднем 35 000 руб/мес</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="card-result__item">
-                  <div class="card-result__item__title">
-                    Наставник на курс «Ассинхронное программирование на
-                    Phyton»
-                  </div>
-                  <div class="card-result__item__text">
-                    <p>на 6 месяцев</p>
-                    <p>2—3 часа в день</p>
-                    <p>в среднем 45 000 руб/мес</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <!-- </div> -->
-            <div class="card-result__buttons">
-              <button class="card-result__buttons-more">
-                Смотреть еще 12 вакансий
-              </button>
-              <button class="card-result__buttons-repeat">
-                Пройти тест заново
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
         <section class="apply">
           <h2 class="apply__title">Не нашлось подходящей позиции?</h2>
           <p class="apply__subtitle">
@@ -806,7 +824,7 @@
                   type="button"
                   data-spoller
                 >
-                  Волнуюсь, что это будет отнимать много&nbsp;времени
+                  А это точно не будет отнимать много времени?
                 </button>
                 <div class="spoller__text">
                   В среднем у начинающих наставников и ревьюеров работа в
@@ -824,13 +842,26 @@
                   type="button"
                   data-spoller
                 >
-                  У меня нет опыта публичных выступлений
+                  Публичные выступления для меня челлендж, вдруг не справлюсь?
                 </button>
                 <div class="spoller__text">
-                  Мы посвятили этому целый модуль в Школе наставников и
-                  расскажем про наш лучший опыт,&nbsp; объясним как обычно
-                  проходят вебинары и чего на них стоит ожидать. Не забывайте,
-                  что суденты — благодарная аудитория : )
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis, delectus dolor velit molestias tempora ullam a
+                  aperiam cupiditate facere voluptatem ab amet doloremque
+                  ducimus quaerat fugit eum excepturi deserunt aspernatur.
+                </div>
+              </div>
+              <div class="spoller">
+                <button
+                  class="spoller__title"
+                  tabindex="-1"
+                  type="button"
+                  data-spoller
+                >
+                  Делать все умею, а вот объяснять... Что, если не получится?
+                </button>
+                <div class="spoller__text">
+                  Lorem ipsum dolor sit amet consectetur
                 </div>
               </div>
               <div class="spoller">
@@ -843,9 +874,12 @@
                   Я самоучка и не знаю, как правильно преподносить теорию
                 </button>
                 <div class="spoller__text">
-                  У нас готовы методические материалы, опираясь на которые вы
-                  сможете структурированно передать&nbsp; свой уникальный опыт и
-                  связать его с учебником, который проходят студенты.
+                  В среднем у начинающих наставников и ревьюеров работа в
+                  Практикуме занимает 2—3 часа в день. Вебинары проводим по
+                  вечерам, их можно совместить с концом рабочего дня. А
+                  подготовку материалов оставить на выходные. В любом случае,
+                  если возникают сложности — коллеги-наставники и команда
+                  Практикума всегда рядом.
                 </div>
               </div>
               <div class="spoller">
@@ -855,14 +889,13 @@
                   type="button"
                   data-spoller
                 >
-                  Боюсь, что студенты будут неактивные
+                  А что, если работы будут скучные, а студенты — неактивные?
                 </button>
                 <div class="spoller__text">
-                  По нашим наблюдениям в каждой группе есть несколько активных и
-                  отзывчивых студентов. А еще в Школе наставников мы дадим
-                  несколько техник, которые помогут пройти этот этап.В случае
-                  любых сложностей коллеги и команда Практикума всегда будут
-                  рядом.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                  molestias ipsa facilis iste voluptates voluptatem deleniti ut
+                  vel reprehenderit inventore ad at, vero dignissimos ullam
+                  maiores sit, dolore corporis tenetur?
                 </div>
               </div>
               <div class="spoller">
@@ -872,12 +905,13 @@
                   type="button"
                   data-spoller
                 >
-                  Я могу быть наставником или ревьюером,&nbsp;если живу не в
-                  России?
+                  Я могу быть наставником или ревьюером, если живу не в России?
                 </button>
                 <div class="spoller__text">
-                  Да, но перечислять вознаграждение мы сможем только на
-                  российский счет.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                  esse accusantium repellendus vero deserunt sunt sequi enim id
+                  voluptatum! Ullam vero quae delectus praesentium modi rem
+                  similique beatae rerum accusamus?
                 </div>
               </div>
             </div>
