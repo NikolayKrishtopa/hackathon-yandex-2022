@@ -69,6 +69,11 @@
           </div>
         </section>
         <section class="resp" id="resp">
+          <img
+            src="<%=require('./src/img/dino.png')%>"
+            alt=""
+            class="resp__dino"
+          />
           <h2 class="resp__title">
             В роли наставника и&nbsp;ревьюера вы&nbsp;будете:
           </h2>
@@ -151,7 +156,7 @@
                 </li>
               </ul>
               <img
-                src="<%=require('./src/images/expert-info-image.svg')%>"
+                src="<%=require('./src/img/rockets.png')%>"
                 alt="Фоновое изображение"
                 class="expert-info__image"
               />
@@ -252,10 +257,14 @@
           <h2 class="vacancies__title">
             Найди для&nbsp;себя идеальную роль в&nbsp;Практикуме
           </h2>
+          <img
+            src="<%=require('./src/img/spaceship.png')%>"
+            alt="мультяшный рисунок зеленой ракеты"
+            class="vacancies__rocket"
+          />no
           <div class="vacancies__container">
             <div class="vacancies__navbar">
               <div class="vacancies__navBlock">
-                <p class="vacancies__navTitle">Роли</p>
                 <div class="vacancies__rolesButtonBlock">
                   <button
                     class="vacancies__roleButton hover"
@@ -319,9 +328,13 @@
               <div class="positions__container">
                 <!-- <template class="vacancies__template"> -->
                 <div class="vacancies__position vacancies__position_shown">
-                  <p class="vacancies__positionTitle">
+                  <a
+                    class="vacancies__positionTitle hover"
+                    href="https://practicum.yandex.ru/job/vacancy-17"
+                    target="_blank"
+                  >
                     Наставник на курс «Python-разработчик»
-                  </p>
+                  </a>
                   <div class="vacancies__descrContainer">
                     <p class="vacancies__posDescrItem" id="vacTerm">
                       на 8 месяцев
@@ -365,9 +378,13 @@
                   </div>
                 </div>
                 <div class="vacancies__position vacancies__position_shown">
-                  <p class="vacancies__positionTitle">
+                  <a
+                    class="vacancies__positionTitle hover"
+                    href="https://practicum.yandex.ru/job/vacancy-5"
+                    target="_blank"
+                  >
                     Наставник на курс «Аналитик данных»
-                  </p>
+                  </a>
                   <div class="vacancies__descrContainer">
                     <p class="vacancies__posDescrItem" id="vacTerm">
                       на 6 месяцев
@@ -807,9 +824,9 @@
               </ul>
               <!-- </div> -->
               <div class="card-result__buttons">
-                <button class="card-result__buttons-more">
+                <a href="#section-vacancies" class="card-result__buttons-more">
                   Смотреть еще 12 вакансий
-                </button>
+                </a>
                 <button class="card-result__buttons-repeat">
                   Пройти тест заново
                 </button>
@@ -921,137 +938,256 @@
       </main>
       <footer class="footer">
         <div class="footer__left-column">
-        <div class="footer__logo-container">
-          <a href="https://practicum.yandex.ru/" class="footer__link">
-            <img
-              src="<%=require('./src/images/white-long-yandex-praktikum-logo.svg')%>"
-              alt="Логотип Яндекс Практикума"
-              class="footer__logo"
-            />
-          </a>
-          <div class="footer__phone-container">
-            <a href="tel:+78007009329" class="footer__phone footer__link"
-              >8-800-700-93-29</a
-            >
-            <p class="footer__phone-subtitle">Звонок по России бесплатный</p>
+          <div class="footer__logo-container">
+            <a href="https://practicum.yandex.ru/" class="footer__link">
+              <img
+                src="<%=require('./src/images/white-long-yandex-praktikum-logo.svg')%>"
+                alt="Логотип Яндекс Практикума"
+                class="footer__logo"
+              />
+            </a>
+            <div class="footer__phone-container">
+              <a href="tel:+78007009329" class="footer__phone footer__link"
+                >8-800-700-93-29</a
+              >
+              <p class="footer__phone-subtitle">Звонок по России бесплатный</p>
+            </div>
+            <nav>
+              <ul class="footer__social-container footer__list">
+                <li>
+                  <a
+                    href="https://dzen.ru/praktikum"
+                    class="footer__social-link footer__link"
+                  >
+                    <img
+                      src="<%=require('./src/images/dzen-logo.svg')%>"
+                      alt="Логотип Дзена"
+                      class="footer__social-icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://vk.com/yandex.practicum"
+                    target="_blank"
+                    class="footer__social-link footer__link"
+                  >
+                    <img
+                      src="<%=require('./src/images/VK-logo.svg')%>"
+                      alt="Логотип Вконтакте"
+                      class="footer__social-icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCjaEmNS6ZOeKgVemfBikjGQ"
+                    target="_blank"
+                    class="footer__social-link footer__link"
+                  >
+                    <img
+                      src="<%=require('./src/images/youtube-logo.svg')%>"
+                      alt="Логотип Ютуба"
+                      class="footer__social-icon"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://thecode.media/"
+                    target="_blank"
+                    class="footer__social-link footer__link"
+                  >
+                    Журнал
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav>
-            <ul class="footer__social-container footer__list">
-              <li>
-                <a href="https://dzen.ru/praktikum" class="footer__social-link footer__link">
-                  <img
-                    src="<%=require('./src/images/dzen-logo.svg')%>"
-                    alt="Логотип Дзена"
-                    class="footer__social-icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://vk.com/yandex.practicum" target="_blank" class="footer__social-link footer__link">
-                  <img
-                    src="<%=require('./src/images/VK-logo.svg')%>"
-                    alt="Логотип Вконтакте"
-                    class="footer__social-icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCjaEmNS6ZOeKgVemfBikjGQ" target="_blank" class="footer__social-link footer__link">
-                  <img
-                    src="<%=require('./src/images/youtube-logo.svg')%>"
-                    alt="Логотип Ютуба"
-                    class="footer__social-icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://thecode.media/" target="_blank" class="footer__social-link footer__link">
-                  Журнал
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer__telegram-container">
-          <p class="footer__telegram-text">
-            Присоединяйтесь к telegram-каналу «+1 в команду Яндекс Практикума»
-          </p>
-          <a href="https://web.telegram.org/z/#-1792176368" target="_blank" class="footer__telegram-button footer__link">
-            <img src="<%=require('./src/images/telegram-logo.svg')%>" alt="Логотип Телеграма" class="footer__telegram-icon">
-            @practicum_experts
-          </a>
-        </div>
+          <div class="footer__telegram-container">
+            <p class="footer__telegram-text">
+              Присоединяйтесь к telegram-каналу «+1 в команду Яндекс Практикума»
+            </p>
+            <a
+              href="https://web.telegram.org/z/#-1792176368"
+              target="_blank"
+              class="footer__telegram-button footer__link"
+            >
+              <img
+                src="<%=require('./src/images/telegram-logo.svg')%>"
+                alt="Логотип Телеграма"
+                class="footer__telegram-icon"
+              />
+              @practicum_experts
+            </a>
+          </div>
         </div>
         <div>
-        <nav class="footer__menu">
-          <ul class="footer__link-container footer__list">
-            <div class="footer__link-column">
-              <h3 class="footer__menu-title">Направления</h3>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/catalog/programming/" target="_blank" class="footer__menu-link footer__link"> Программирование </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/catalog/data-analysis/" target="_blank" class="footer__menu-link footer__link"> Анализ данных </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/catalog/design/" target="_blank" class="footer__menu-link footer__link"> Дизайн </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/catalog/marketing/" target="_blank" class="footer__menu-link footer__link"> Маркетинг </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/catalog/management/" target="_blank" class="footer__menu-link footer__link"> Менеджмент </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/english/" target="_blank" class="footer__menu-link footer__link"> Английский язык</a>
-              </li>
-            </div>
-            <div class="footer__link-column">
-              <h3 class="footer__menu-title">О нас</h3>
-              <li class="footer__menu-list-item">
-                <a href="https://yandex.ru/legal/practicum_termsofuse/" target="_blank" class="footer__menu-link footer__link"> Правовая информация </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/b2b/" target="_blank" class="footer__menu-link footer__link"> Корпоративным клиентам </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/reviews/" target="_blank" class="footer__menu-link footer__link"> Отзывы </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://yandex.ru/support/praktikum/feedback.html" target="_blank" class="footer__menu-link footer__link"> Помощь </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="https://code.s3.yandex.net/License%20YSDA.pdf" target="_blank" class="footer__menu-link footer__link"> Лицензия </a>
-              </li>
-              <li class="footer__menu-list-item">
-                <a href="mailto:media@praktikum.yandex.ru" target="_blank" class="footer__menu-link footer__link"> Для СМИ </a>
-              </li>
-            </div>
-            <div class="footer__link-column">
-              <h3 class="footer__menu-title">Стать частью команды</h3>
-              <li class="footer__menu-list-item">
-                <a href="https://practicum.yandex.ru/hr/" target="_blank" class="footer__menu-link footer__link"> Вакансии в основной<br> команде </a>
-              </li>
-            </div>
-          </ul>
-        </nav>
-        <div class="footer__copyright-container">
-          <p class="footer__paragraph">
-            Информация на&nbsp;данной странице описывает возможные варианты получения дополнительного
-            дохода в&nbsp;месяц (т.н. подработка). Не&nbsp;является предложением о&nbsp;работе. Размещенные объявления
-            о&nbsp;потребности в&nbsp;тех или иных услугах не&nbsp;являются вакансиями.
-          </p>
-          <p class="footer__paragraph">
-            Образовательные услуги оказываются АНО ДПО &laquo;ШАД&raquo;. ШАД&nbsp;&mdash; это <a href="https://academy.yandex.ru/dataschool/" target="_blank" class="footer__text-copyright-link footer__link">Школа анализа данных</a>, основанная
-            Яндексом и&nbsp;оказывающая образовательные услуги на&nbsp;основании <a href="https://code.s3.yandex.net/License%20YSDA.pdf" target="_blank" class="footer__text-copyright-link footer__link">Лицензии &#8470;&nbsp;036031</a> от&nbsp;24&nbsp;марта 2015&nbsp;года.
-            Сертификат о&nbsp;прохождении обучения по&nbsp;программе дополнительного профессионального образования
-            также выдается АНО ДПО &laquo;ШАД&raquo;.
-          </p>
-          <p class="footer__paragraph">
-            &copy;&nbsp;2022&nbsp;АНО ДПО &laquo;ШАД&raquo;, ООО
-            &laquo;Яндекс&raquo;
-          </p>
-        </div>
+          <nav class="footer__menu">
+            <ul class="footer__link-container footer__list">
+              <div class="footer__link-column">
+                <h3 class="footer__menu-title">Направления</h3>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/catalog/programming/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Программирование
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/catalog/data-analysis/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Анализ данных
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/catalog/design/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Дизайн
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/catalog/marketing/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Маркетинг
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/catalog/management/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Менеджмент
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/english/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Английский язык</a
+                  >
+                </li>
+              </div>
+              <div class="footer__link-column">
+                <h3 class="footer__menu-title">О нас</h3>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://yandex.ru/legal/practicum_termsofuse/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Правовая информация
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/b2b/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Корпоративным клиентам
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/reviews/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Отзывы
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://yandex.ru/support/praktikum/feedback.html"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Помощь
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://code.s3.yandex.net/License%20YSDA.pdf"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Лицензия
+                  </a>
+                </li>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="mailto:media@praktikum.yandex.ru"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Для СМИ
+                  </a>
+                </li>
+              </div>
+              <div class="footer__link-column">
+                <h3 class="footer__menu-title">Стать частью команды</h3>
+                <li class="footer__menu-list-item">
+                  <a
+                    href="https://practicum.yandex.ru/hr/"
+                    target="_blank"
+                    class="footer__menu-link footer__link"
+                  >
+                    Вакансии в основной<br />
+                    команде
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </nav>
+          <div class="footer__copyright-container">
+            <p class="footer__paragraph">
+              Информация на&nbsp;данной странице описывает возможные варианты
+              получения дополнительного дохода в&nbsp;месяц (т.н. подработка).
+              Не&nbsp;является предложением о&nbsp;работе. Размещенные
+              объявления о&nbsp;потребности в&nbsp;тех или иных услугах
+              не&nbsp;являются вакансиями.
+            </p>
+            <p class="footer__paragraph">
+              Образовательные услуги оказываются АНО ДПО &laquo;ШАД&raquo;.
+              ШАД&nbsp;&mdash; это
+              <a
+                href="https://academy.yandex.ru/dataschool/"
+                target="_blank"
+                class="footer__text-copyright-link footer__link"
+                >Школа анализа данных</a
+              >, основанная Яндексом и&nbsp;оказывающая образовательные услуги
+              на&nbsp;основании
+              <a
+                href="https://code.s3.yandex.net/License%20YSDA.pdf"
+                target="_blank"
+                class="footer__text-copyright-link footer__link"
+                >Лицензии &#8470;&nbsp;036031</a
+              >
+              от&nbsp;24&nbsp;марта 2015&nbsp;года. Сертификат
+              о&nbsp;прохождении обучения по&nbsp;программе дополнительного
+              профессионального образования также выдается АНО ДПО
+              &laquo;ШАД&raquo;.
+            </p>
+            <p class="footer__paragraph">
+              &copy;&nbsp;2022&nbsp;АНО ДПО &laquo;ШАД&raquo;, ООО
+              &laquo;Яндекс&raquo;
+            </p>
+          </div>
         </div>
       </footer>
     </div>

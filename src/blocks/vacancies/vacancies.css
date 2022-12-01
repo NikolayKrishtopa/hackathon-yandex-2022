@@ -5,6 +5,15 @@
   display: flex;
   flex-direction: column;
   gap: 56px;
+  position: relative;
+}
+.vacancies__rocket {
+  margin: 0;
+  padding: 0;
+  max-width: 270px;
+  position: absolute;
+  right: 100px;
+  top: 0;
 }
 .vacancies__title {
   margin: 0;
@@ -45,7 +54,7 @@
 .vacancies__rolesButtonBlock {
   display: flex;
   flex-wrap: nowrap;
-  max-width: 224px;
+  max-width: 262px;
   align-items: center;
   height: 52px;
   border-radius: 26px;
@@ -127,6 +136,8 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
+  text-decoration: none;
+  color: #000;
 }
 .vacancies__descrContainer {
   margin: 0;
@@ -221,6 +232,9 @@
   .vacancies__container {
     gap: 60px;
   }
+  .vacancies__rocket {
+    display: none;
+  }
 }
 @media (max-width: 1100px) {
   .vacancies__container {
@@ -277,7 +291,7 @@
 
 @media (max-width: 600px) {
   .vacancies {
-    padding: 88px 8px;
+    padding: 0px 8px;
   }
   .vacancies__posExtendButton {
     right: 17px;

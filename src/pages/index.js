@@ -66,7 +66,7 @@ const vacancies = new Vacancies();
 vacancies.initialize();
 
 //***Реализация смены значений в секции "В роли наставника вы будете..."***
-const spanToSwitch = document.querySelector(".resp__introSwitch");
+const spanToSwitch = document.querySelector(".intro__switch");
 const spanValues = [
   "программировании",
   "дизайне",
@@ -74,13 +74,12 @@ const spanValues = [
   "маркетинге",
   "менеджменте",
 ];
-const getRandomValue = () => {
+console.log(spanToSwitch);
+const setRandomValue = () => {
   const randomIndex = Math.floor(Math.random() * spanValues.length);
-  return spanValues[randomIndex];
+  spanToSwitch.textContent = spanValues[randomIndex];
 };
-// setInterval(() => {
-//   spanToSwitch.textContent = getRandomValue();
-// }, 2000);
+setInterval(setRandomValue, 2000);
 
 // ***Реализация появления сообщений при скролле
 
@@ -404,8 +403,8 @@ function Repeat() {
 // кнопка на вакансии
 function SendingVacancy() {
   buttonMoreVacancy.addEventListener("click", () => {
-    vacancies.setMentor();
     vacancies.setProgramming();
+    vacancies.setMentor();
   });
 }
 
