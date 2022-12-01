@@ -1,6 +1,7 @@
 import "./index.css";
 import scrollSelectors from "../utils/config";
 import MentorReviewer from "../blocks/components/MentorReviewer";
+import Popup from "../components/Popup";
 
 // ***Реализация эффекта ластика в хедере***
 // Вариант черновой, отрефакторить на Canvas
@@ -103,3 +104,23 @@ function changeSlide(direction) {
     activeSliderIndex * width * 0.929
   }px)`;
 }
+
+// ***Реализация логики попапов***
+
+// Кнопка открытия попапа application-popup
+const applicationButtonElement = document.querySelector(".apply__button");
+
+const applicationPopup = new Popup(
+  '.popup_type_application'
+);
+
+// Функция-обработчик клика по кнопке applicationButtonElement
+const handleApplicationButtonClick = () => {
+  applicationPopup.open();
+};
+
+// Установка слушателя клика по кнопке открытия попапа
+applicationButtonElement.addEventListener('click', handleApplicationButtonClick);
+
+// Установка слушателей событий попапу
+applicationPopup.setEventListeners();

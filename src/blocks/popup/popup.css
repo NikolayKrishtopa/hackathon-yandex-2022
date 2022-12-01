@@ -152,10 +152,6 @@
   background-position-x: calc(100% - 20px);
 }
 
-.popup__option {
-
-}
-
 .popup__textarea {
   box-sizing: border-box;
   margin: 0 auto 32px;
