@@ -1585,7 +1585,7 @@ template {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: url(b1bacdcb73f736beeab7.png);
+  background: url(a8b7dcb3404ffc63d6f8.png);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1597,7 +1597,6 @@ template {
   margin: 0;
   padding: 0;
   border: none;
-  display: none;
   width: 36px;
   height: 36px;
   display: none;
@@ -1689,7 +1688,7 @@ template {
 @media (max-width: 600px) {
   .header {
     padding: 12px 8px;
-    background: url(72b1dfb89b2f06bebcc4.png);
+    background: url(c1008515b0c137955cb9.png);
   }
   .header__navbar {
     margin-bottom: 80px;
@@ -2034,8 +2033,6 @@ template {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-}
-.mentorVSreviewer__image {
 }
 .mentorVSreviewer__title {
   margin: 0;
