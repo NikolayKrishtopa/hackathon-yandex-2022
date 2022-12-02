@@ -1491,7 +1491,7 @@ template {
   justify-content: space-between;
   background-color: #fff;
   border-radius: 20px;
-  z-index: 2;
+  z-index: 3;
 }
 .header__navbarContainer {
   position: absolute;
@@ -1612,6 +1612,7 @@ template {
   align-items: center;
   justify-content: center;
   background: none;
+  cursor: pointer;
 }
 .header__navbarWrapper {
   margin: 0;
