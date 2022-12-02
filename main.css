@@ -3337,8 +3337,9 @@ template {
   line-height: 1.4;
 }
 .vacancies__rolesButtonBlock {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-wrap: nowrap;
   max-width: 262px;
   align-items: center;
   height: 52px;
@@ -3346,7 +3347,7 @@ template {
   background-color: #eaeaea;
   border: 2px solid #858585;
   box-sizing: border-box;
-  flex-shrink: 1;
+  justify-content: space-between;
 }
 .vacancies__roleButton {
   margin: 0;
@@ -3530,9 +3531,9 @@ template {
     padding: 0 60px 132px;
   }
   @media (max-width: 900px) {
-    /* .vacancies__container {
-      grid-template-columns: 1fr;
-    } */
+    .vacancies__rolesButtonBlock {
+      max-width: 226px;
+    }
     .vacancies__roleButton,
     .vacancies__positionTitle,
     .vacancies__facultyButton,
