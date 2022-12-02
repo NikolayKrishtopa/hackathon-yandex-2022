@@ -22,7 +22,7 @@ burgerButton.addEventListener("click", () => {
 
 const header = document.querySelector(".header");
 const headerButton = document.querySelector(".header__button");
-const headerNavbar = document.querySelector(".header__navbar");
+const headerNavbar = document.querySelector(".header__navbarContainer");
 const eraserContainer = document.querySelector(".eraserContainer");
 header.addEventListener("mousemove", (e) => {
   if (e.target === headerButton || e.target === headerNavbar) return;

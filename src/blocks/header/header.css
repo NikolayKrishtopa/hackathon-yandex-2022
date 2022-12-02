@@ -1,6 +1,6 @@
 .header {
   margin: 0;
-  padding: 12px 120px 310px;
+  padding: 0 120px 310px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -9,17 +9,26 @@
   background-color: #000;
   position: relative;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .header__navbar {
-  margin: 0 0 160px 0;
-  padding: 16px;
+  padding: 12px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
   border-radius: 20px;
+  z-index: 2;
+}
+.header__navbarContainer {
+  position: absolute;
+  top: 12px;
+  right: 120px;
+  left: 120px;
+  bottom: 0;
   z-index: 2;
 }
 .header__logo {
@@ -66,7 +75,7 @@
   border-color: #37935b;
 }
 .header__title {
-  margin: 0;
+  margin: 240px 0 0 0;
   padding: 0;
   max-width: 510px;
   font-weight: 500;
@@ -143,9 +152,6 @@
 }
 
 @media (max-width: 1200px) {
-  /* .header__navbar {
-    align-items: flex-start;
-  } */
   .header__burgerButton {
     display: flex;
     align-self: start;
@@ -169,8 +175,12 @@
   }
 }
 @media (max-width: 1000px) {
+  .header__navbarContainer {
+    left: 60px;
+    right: 60px;
+  }
   .header {
-    padding: 12px 60px 200px;
+    padding: 0 60px 200px;
   }
   .header__title {
     font-size: 70px;
@@ -193,19 +203,39 @@
     height: 150px;
   }
 }
-@media (max-width: 600px) {
+
+@media (max-width: 650px) {
   .header {
-    padding: 12px 40px 200px;
+    background: url(../../img/mobile_YP.png);
+  }
+  .header span {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__navbarContainer {
+    left: 8px;
+    right: 8px;
+  }
+  .header {
+    padding: 0 40px 200px;
     min-height: 655px;
+    padding: 0 8px 12px;
+    background: url(../../img/mobile_YP.png);
   }
   .header__title {
     font-size: 50px;
+    margin: 150px 0 0 0;
+    font-size: 44px;
+    line-height: 1.09;
   }
   .header__subtitle {
     font-size: 14px;
-  }
-  .header__navbar {
-    margin: 0 0 100px 0;
+    margin: 12px 0 32px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 334px;
   }
   .header__button {
     width: 190px;
@@ -213,35 +243,10 @@
     border-radius: 25px;
     font-size: 12px;
     line-height: 1;
-  }
-}
-@media (max-width: 600px) {
-  .header {
-    padding: 12px 8px;
-    background: url(../../img/mobile_YP.png);
-  }
-  .header__navbar {
-    margin-bottom: 80px;
-    padding: 12px;
-  }
-  .header__title {
-    font-size: 44px;
-    line-height: 1.09;
-  }
-  .header__subtitle {
-    margin: 12px 0 32px 0;
-    font-size: 16px;
-    line-height: 1.4;
-    max-width: 334px;
-  }
-  .header__button {
     width: 280px;
     height: 50px;
     border-radius: 25px;
     font-size: 16px;
     line-height: 1.25;
-  }
-  .header span {
-    display: none;
   }
 }
