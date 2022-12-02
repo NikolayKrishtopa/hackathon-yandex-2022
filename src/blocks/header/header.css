@@ -115,7 +115,7 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background: url(../../img/headerBgnd.png);
+  background: url(../../img/desktop_picture.png);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -127,10 +127,9 @@
   margin: 0;
   padding: 0;
   border: none;
-  display: none;
   width: 36px;
   height: 36px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background: none;
@@ -219,7 +218,7 @@
 @media (max-width: 600px) {
   .header {
     padding: 12px 8px;
-    background: url(../../img/headerBkgMobile.png);
+    background: url(../../img/mobile_YP.png);
   }
   .header__navbar {
     margin-bottom: 80px;
