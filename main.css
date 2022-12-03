@@ -1592,6 +1592,7 @@ template {
 .header span {
   display: block;
   position: absolute;
+  z-index: 1;
   width: 200px;
   height: 200px;
   background: url(a8b7dcb3404ffc63d6f8.png);
@@ -3236,6 +3237,7 @@ template {
   width: 100%;
   background-color: #fff;
   border-radius: 80px;
+  z-index: 4;
 }
 .intro__heading {
   margin: 0 0 32px 0;
