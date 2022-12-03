@@ -4,6 +4,7 @@
   width: 100%;
   background-color: #fff;
   border-radius: 80px;
+  z-index: 4;
 }
 .intro__heading {
   margin: 0 0 32px 0;
