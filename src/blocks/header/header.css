@@ -1,6 +1,6 @@
 .header {
   margin: 0;
-  padding: 0 120px 310px;
+  padding: 0 112px 280px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -26,17 +26,15 @@
 .header__navbarContainer {
   position: absolute;
   top: 12px;
-  right: 120px;
-  left: 120px;
-  bottom: 0;
+  right: 112px;
+  left: 112px;
   z-index: 3;
 }
 .header__logo {
   margin: 0;
   padding: 0;
-  width: 100%;
-  max-width: 163px;
-  max-height: 30px;
+  width: 165px;
+  height: 30px;
 }
 .header__linksBlock {
   margin: 0;
@@ -45,23 +43,24 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 20px;
 }
 .header__link {
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
-  line-height: 1.29;
+  font-size: 16px;
+  line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
+  letter-spacing: 0.01em;
 }
 .header__navBlockButton {
-  margin: 0 12px;
-  padding: 8px 12px;
+  margin: 0;
+  padding: 8px 12px 7px 12px;
   color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
-  line-height: 1;
+  font-size: 16px;
+  line-height: 1.25;
   cursor: pointer;
   background-color: transparent;
   border: solid 1px #000;
@@ -75,25 +74,24 @@
   border-color: #37935b;
 }
 .header__title {
-  margin: 240px 0 0 0;
+  margin: 232px 0 0 0;
   padding: 0;
-  max-width: 510px;
+  max-width: 946px;
   font-weight: 500;
-  font-size: 100px;
-  line-height: 1;
+  font-size: 80px;
+  line-height: 72px;
   color: #fff;
   pointer-events: none;
   z-index: 2;
-  max-width: 430px;
 }
 .header__subtitle {
   pointer-events: none;
   margin: 20px 0 56px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
   color: #fff;
-  max-width: 445px;
+  max-width: 510px;
   z-index: 2;
 }
 .header__button {
@@ -104,13 +102,13 @@
   justify-content: center;
   text-decoration: none;
   background-color: #29cb64;
-  width: 372px;
-  height: 77px;
+  width: 370px;
+  height: 75px;
   border-radius: 38px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 21px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.4;
   color: #000;
   z-index: 2;
   flex-shrink: 0;
@@ -197,8 +195,8 @@
     font-size: 14px;
   }
   .header__logo {
-    max-width: 120px;
-    max-height: 23px;
+    width: 120px;
+    height: 23px;
   }
   .header span {
     width: 150px;
