@@ -194,10 +194,10 @@
     border-radius: 25px;
     font-size: 14px;
   }
-  .header__logo {
+  /* .header__logo {
     width: 120px;
     height: 23px;
-  }
+  } */
   .header span {
     width: 150px;
     height: 150px;
@@ -225,10 +225,10 @@
     background: url(../../img/mobile_YP.png);
   }
   .header__title {
-    font-size: 50px;
-    margin: 150px 0 0 0;
+    margin: 162px 0 0 0;
     font-size: 44px;
     line-height: 1.09;
+    letter-spacing: -0.02em;
   }
   .header__subtitle {
     font-size: 14px;
@@ -238,11 +238,6 @@
     max-width: 334px;
   }
   .header__button {
-    width: 190px;
-    height: 50px;
-    border-radius: 25px;
-    font-size: 12px;
-    line-height: 1;
     width: 280px;
     height: 50px;
     border-radius: 25px;
