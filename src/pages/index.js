@@ -6,6 +6,21 @@ import minusIcon from "../img/minusIcon.png";
 import plusIcon from "../img/plusIcon.png";
 import { gsap } from "gsap";
 import Popup from "../components/Popup";
+// import Swiper JS
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+// swiper bundle styles
+import 'swiper/css/bundle'
+
+// swiper core styles
+import 'swiper/css'
+
+// modules styles
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+
+
 
 // Кнопка бургерного меню
 
@@ -104,46 +119,63 @@ mentorReviewer.initialize();
 // ===== stories =======
 
 // ======= slider gallari ======
-const leftBtn = document.querySelector(".nav__btn_left");
-const rightBtn = document.querySelector(".nav__btn_right");
-const galleries = document.querySelector(".galleries");
-const stories = document.querySelector(".stories");
-const gallery = document.querySelector(".gallery");
+// инициализируем Swiper
+const swiper = new Swiper(".mySwiper", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
 
-//количество слайдов
-const slidesCount = galleries.querySelectorAll(".gall").length;
-
-//активный стайд
-let activeSliderIndex = 0;
-
-leftBtn.addEventListener("click", () => {
-  changeSlide("left");
+  // Navigation arrows
+  navigation: {
+    nextEl: ".nav__btn_right",
+    prevEl: ".nav__btn_left",
+  },
 });
 
-//слушатель на кнопку вправо
-rightBtn.addEventListener("click", () => {
-  changeSlide("right");
-});
 
-function changeSlide(direction) {
-  if (direction === "right") {
-    activeSliderIndex >= 1 ? false : activeSliderIndex++;
-    // console.log(activeSliderIndex);
-    if (activeSliderIndex === slidesCount) {
-      activeSliderIndex = 0;
-    }
-  } else if (direction === "left") {
-    activeSliderIndex <= 0 ? false : activeSliderIndex--;
-    console.log(activeSliderIndex);
-    if (activeSliderIndex < 0) {
-      activeSliderIndex = slidesCount - 1;
-    }
-  }
-  const width = stories.clientWidth;
-  galleries.style.transform = `translateX(-${
-    activeSliderIndex * width * 0.929
-  }px)`;
-}
+
+
+// const leftBtn = document.querySelector(".nav__btn_left");
+// const rightBtn = document.querySelector(".nav__btn_right");
+// const galleries = document.querySelector(".galleries");
+// const stories = document.querySelector(".stories");
+// const gallery = document.querySelector(".gallery");
+
+// //количество слайдов
+// const slidesCount = galleries.querySelectorAll(".gall").length;
+
+// //активный стайд
+// let activeSliderIndex = 0;
+
+// leftBtn.addEventListener("click", () => {
+//   changeSlide("left");
+// });
+
+// //слушатель на кнопку вправо
+// rightBtn.addEventListener("click", () => {
+//   changeSlide("right");
+// });
+
+// function changeSlide(direction) {
+//   if (direction === "right") {
+//     activeSliderIndex >= 1 ? false : activeSliderIndex++;
+//     // console.log(activeSliderIndex);
+//     if (activeSliderIndex === slidesCount) {
+//       activeSliderIndex = 0;
+//     }
+//   } else if (direction === "left") {
+//     activeSliderIndex <= 0 ? false : activeSliderIndex--;
+//     console.log(activeSliderIndex);
+//     if (activeSliderIndex < 0) {
+//       activeSliderIndex = slidesCount - 1;
+//     }
+//   }
+//   const width = stories.clientWidth;
+//   galleries.style.transform = `translateX(-${
+//     activeSliderIndex * width * 0.929
+//   }px)`;
+// }
 
 // ***============= questions ====================
 
